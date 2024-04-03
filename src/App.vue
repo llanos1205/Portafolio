@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Portfolio />
+    <Construction />
   </div>
 </template>
 
 <script>
-import Portfolio from './components/Portfolio.vue';
-
+//import Portfolio from './components/Portfolio.vue';
+import Construction from "@/components/Construction.vue";
 export default {
   name: 'App',
   components: {
-    Portfolio,
+    Construction,
   },
 };
 </script>
