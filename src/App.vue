@@ -2,12 +2,11 @@
   <div id="app">
 
     <UnderConstruction ref="underConstruction" />
-
     <Bio ref="bio" />
-
     <SkillGrid ref="skillGrid" :skills="skills" />
-
     <Projects ref="projects" />
+    <About ref="aboutMe" />
+
 
   </div>
 </template>
@@ -17,6 +16,7 @@ import UnderConstruction from "@/components/Construction.vue";
 import SkillGrid from "@/components/SkillGrid.vue";
 import Bio from "@/components/Bio.vue";
 import Projects from "@/components/Projects.vue";
+import About from "@/components/About.vue";
 import scrollIntoView from 'scroll-into-view';
 
 export default {
@@ -25,17 +25,18 @@ export default {
     UnderConstruction,
     SkillGrid,
     Bio,
-    Projects
+    Projects,
+    About
   },
   data() {
     return {
-      components: ['underConstruction', 'bio', 'skillGrid', 'projects'],
+      components: ['underConstruction', 'bio', 'skillGrid', 'projects','aboutMe'],
       currentComponentIndex: 0,
       skills: [
         {
           name: "AWS",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/amazonaws.svg",
-          level: 0.9
+          level: 1.0
         },
         {
           name: "Azure",
@@ -45,37 +46,52 @@ export default {
         {
           name: "Google Cloud",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/googlecloud.svg",
-          level: 0.7
+          level: 0.3
         },
         {
           name: "Docker",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/docker.svg",
-          level: 0.6
+          level: 1.0
         },
         {
           name: "Kubernetes",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/kubernetes.svg",
-          level: 0.5
+          level: 0.9
+        },
+        // {
+        //   name: "FluxCD",
+        //   iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbAzi8PYuZU7N7JLNtCUdMr5Bo8anORAd9IPDW8u60ng&s",
+        //   level: 0.6
+        // },
+        {
+          name: "Helm",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/helm.svg",
+          level: 0.6
+        },
+        {
+          name: "Docker Swarm",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/docker.svg",
+          level: 0.7
         },
         {
           name: "Terraform",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/terraform.svg",
-          level: 0.4
+          level: 0.8
         },
         {
-          name: "Ansible",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/ansible.svg",
-          level: 0.3
+          name: "Azure Bicep",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/microsoftazure.svg",
+          level: 0.6
         },
         {
           name: "Jenkins",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/jenkins.svg",
-          level: 0.2
+          level: 0.35
         },
         {
-          name: "GitLab CI",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gitlab.svg",
-          level: 0.1
+          name: "Bitbucket CI",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/bitbucket.svg",
+          level: 0.4
         },
         {
           name: "GitHub Actions",
@@ -83,31 +99,55 @@ export default {
           level: 0.9
         },
         {
-          name: "CircleCI",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/circleci.svg",
+          name: "Azure DevOps",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/azuredevops.svg",
+          level: 1.0
+        },
+        {
+          name: "Nginx",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/nginx.svg",
           level: 0.8
         },
         {
-          name: "Travis CI",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/travisci.svg",
-          level: 0.7
-        },
-        {
-          name: "Helm",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/helm.svg",
+          name: "IIS",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/internetexplorer.svg",
           level: 0.6
         },
         {
-          name: "Vagrant",
-          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/vagrant.svg",
-          level: 0.5
+          name: "SQL Server",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/microsoftsqlserver.svg",
+          level: 0.7
+        },
+        {
+          name: "Mongo DB",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/mongodb.svg",
+          level: 0.7
+        },
+        {
+          name: "C# .NET",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/dot-net.svg",
+          level: 0.55
+        },
+        {
+          name: "Python",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/python.svg",
+          level: 0.8
         },
         {
           name: "Vue",
           iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/vue-dot-js.svg",
           level: 0.01
+        },
+        {
+          name: "Bash",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gnubash.svg",
+          level: 0.8
+        },
+        {
+          name: "Powershell",
+          iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/powershell.svg",
+          level: 0.60
         }
-
       ]
     };
   },
@@ -123,33 +163,23 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('wheel', (event) => {
-      const rectUnderConstruction = this.$refs.underConstruction.$el.getBoundingClientRect();
-      const rectBio = this.$refs.bio.$el.getBoundingClientRect();
-      const rectSkillGrid = this.$refs.skillGrid.$el.getBoundingClientRect();
-      const rectProjects = this.$refs.projects.$el.getBoundingClientRect();
 
-      if (event.deltaY > 0) {
-        // Scrolling down
-        if (rectUnderConstruction.bottom < window.innerHeight && rectBio.bottom >= window.innerHeight) {
-          this.scrollToComponent('bio');
-        } else if (rectBio.bottom < window.innerHeight && rectSkillGrid.bottom >= window.innerHeight) {
-          this.scrollToComponent('skillGrid');
-        } else if (rectSkillGrid.bottom < window.innerHeight && rectProjects.bottom >= window.innerHeight) {
-          this.scrollToComponent('projects');
+      window.addEventListener('wheel', (event) => {
+        if (event.deltaY > 0) {
+          // Scrolling down
+          if (this.currentComponentIndex < this.components.length - 1) {
+            this.currentComponentIndex++;
+          }
+        } else {
+          // Scrolling up
+          if (this.currentComponentIndex > 0) {
+            this.currentComponentIndex--;
+          }
         }
-      } else {
-        // Scrolling up
-        if (rectProjects.top > 0 && rectSkillGrid.top <= 0) {
-          this.scrollToComponent('skillGrid');
-        } else if (rectSkillGrid.top > 0 && rectBio.top <= 0) {
-          this.scrollToComponent('bio');
-        } else if (rectBio.top > 0 && rectUnderConstruction.top <= 0) {
-          this.scrollToComponent('underConstruction');
-        }
-      }
-    });
-  }
+        this.scrollToComponent(this.components[this.currentComponentIndex]);
+      });
+    }
+
 };
 </script>
 

@@ -5,9 +5,9 @@
 <template>
 
 <div class="bio">
-  <h1>Hi, I'm Your Name</h1>
-  <p>I'm a software engineer with a passion for cloud computing and DevOps.</p>
-  <p>Check out my projects below!</p>
+  <h1>Hey, I'm Diego</h1>
+  <p>I'm a DevOps engineer</p>
+  <p>3 years of experience. Specialized in cloud based solutions</p>
 </div>
 </template>
 

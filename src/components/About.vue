@@ -2,11 +2,20 @@
   <div class="about">
     <div class="text-body">
       <h2>About Me</h2>
-      <p>
-        Multiline text paragraph goes here. This is where you can write
-        about yourself, your experiences, skills, and anything else you'd
-        like to share with your audience.
-      </p>
+      <div >
+        <p>
+          My name is Diego Alejandro Llanos Gareca, I am a DevOps engineer , I have 3 years of experience in the field. I specialize in cloud-based solutions.
+
+        </p>
+
+        <p>
+          I am an  enthusiast of kubernetes and git-ops, I am always looking for new challenges and learning new technologies. Love automating processes, if you can do it manually you can automate it.
+        </p>
+        <p>
+          I like "Milanesa a la napolitana"
+        </p>
+      </div>
+
     </div>
     <div class="photo">
       <!-- Replace 'photo-url.jpg' with the actual URL of your photo -->
@@ -23,6 +32,8 @@ const title = "About Me";
 
 <style scoped>
 .about {
+  width: 100vw;
+  height: 50vh;
   display: flex;
   align-items: center;
 }
@@ -47,4 +58,3 @@ const title = "About Me";
 }
 </style>
 
-<!--https://media.licdn.com/dms/image/C4D16AQFyK66HIHTCYw/profile-displaybackgroundimage-shrink_350_1400/0/1628807504867?e=1717632000&v=beta&t=EpBc8-Qiqwgog-VMS4SCf8Iv5mmw3ziYguCxgh46W1c
