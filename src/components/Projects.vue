@@ -35,4 +35,9 @@
   flex-direction: column;/* Change this to the color you want */
   /* ...existing styles... */
 }
+@media (max-width: 600px) {
+  .projects {
+    height: 100vh;
+  }
+}
 </style>

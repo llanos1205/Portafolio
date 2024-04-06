@@ -21,11 +21,21 @@ const props = defineProps({
 
 <style scoped>
 .grid {
-
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 30px;
+  column-gap: 30px;
+
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  overflow-x: auto;
+  width: 100%;
 }
+
+@media (max-width: 600px) {
+  .grid {
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the minimum width as needed */
+  }
+}
+
 .container{
   width: 100vw;
   height: 50vh;
@@ -34,6 +44,11 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+@media (max-width: 600px) {
+  .container {
+    height: 100vh; /* Height in smaller screens */
+  }
 }
 .title {
   margin-bottom: 50px; /* Add some margin at the bottom */

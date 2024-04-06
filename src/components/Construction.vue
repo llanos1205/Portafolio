@@ -29,4 +29,9 @@ export default {
   font-size: 18px;
   margin-top: 20px;
 }
+@media (max-width: 600px) {
+  .construction {
+    height: 100vh;
+  }
+}
 </style>

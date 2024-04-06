@@ -1,7 +1,9 @@
 <template>
-  <div class="skill-block" @click="toggleRectangle">
-    <div class="square">
-      <img :src="iconUrl" alt="Icon" class="icon" />
+  <div class="skill-block" @mouseover="toggleRectangle" @mouseleave="hideRectangle">
+    <div class="square-wrapper">
+      <div class="square">
+        <img :src="iconUrl" alt="Icon" class="icon" />
+      </div>
       <div v-if="showRectangle" class="rectangle" :style="{ width: rectangleWidth, height: rectangleHeight, top: rectangleTop }">
         <div class="fill" :style="{ width: fillPercentage, backgroundColor: fillColor }"></div>
       </div>
@@ -38,19 +40,17 @@ export default {
     };
   },
   methods: {
-    toggleRectangle() {
-      this.showRectangle = !this.showRectangle;
-      if (this.showRectangle) {
+      toggleRectangle() {
+        this.showRectangle = true;
         this.rectangleWidth = "100%";
         this.setFillColor();
-
-
-      } else {
+      },
+      hideRectangle() {
+        this.showRectangle = false;
         this.rectangleWidth = "0%";
         this.fillPercentage = "0%";
         this.fillColor = "transparent";
-      }
-    },
+      },
     setFillColor() {
       if (this.level >= 0.75) {
         this.fillColor = "green";
@@ -67,17 +67,31 @@ export default {
 
 <style scoped>
 .skill-block {
+  width: 100%;
+  margin-top: 20px;
   display: inline-block;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .skill-block {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.square-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
 }
 
 .square {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.1); /* Transparent square */
   border-radius: 15px; /* Rounded corners */
 }
+
 
 .icon {
   position: absolute;

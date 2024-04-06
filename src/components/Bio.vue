@@ -23,4 +23,9 @@
   background-color: #205295; /* Change this to the color you want */
   /* ...existing styles... */
 }
+@media (max-width: 600px) {
+  .bio {
+    height: 100vh;
+  }
+}
 </style>

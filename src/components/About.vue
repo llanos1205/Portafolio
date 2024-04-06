@@ -36,8 +36,15 @@ const title = "About Me";
   height: 50vh;
   display: flex;
   align-items: center;
+  flex-direction: row; /* Arrange items side by side in larger screens */
 }
 
+@media (max-width: 600px) {
+  .about {
+    height: 100vh;
+    flex-direction: column; /* Stack items vertically in smaller screens */
+  }
+}
 .text-body {
   flex: 1;
   padding: 20px;
