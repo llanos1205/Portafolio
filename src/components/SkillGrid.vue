@@ -24,15 +24,19 @@ const props = defineProps({
   display: grid;
   column-gap: 30px;
 
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(8, minmax(100px, 1fr));
   overflow-x: auto;
-  width: 100%;
-}
 
+}
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+}
 @media (max-width: 600px) {
   .grid {
     column-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the minimum width as needed */
+    grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Adjust the minimum width as needed */
   }
 }
 
