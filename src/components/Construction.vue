@@ -13,9 +13,14 @@ export default {
 
 <style scoped>
 .construction {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw; /* 100% of the window's width */
+  height: 50vh; /* 80% of the window's height */
+  background-color: #2C74B3; /* Change this to the color you want */
+  /* ...existing styles... */
 }
 
 .construction p {
