@@ -8,9 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "scroll-into-view": "^1.16.2",
     "vue": "^3.4.21"
   },
   "devDependencies": {
