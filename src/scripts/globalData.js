@@ -1,4 +1,6 @@
 // src/globalData.js
+import Project1Image from '@/assets/Project1.svg';
+
 export default {
     url: 'https://example.com',
     name: 'Example Name',
@@ -226,25 +228,39 @@ export default {
     ],
     projects: [
         {
-            name: 'Migration from ompremise to cloud',
+            name: 'Migration from on-premise to cloud',
             description: 'Migration from on-premise infrastructure to cloud',
-            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/progress.svg',
+            imageUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kubernetes.svg",
             steps:[
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg',
-                    description: 'Azure AKS'
+                    description: 'Initial On premise infrastructure'
                 },
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
-                    description: 'Azure Arc'
+                    description: 'Dockerize applications to scape from IIS'
                 },
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
-                    description: 'Terraform'
+                    description: 'Terraform to create infrastructure in Azure'
                 },
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
-                    description: 'Azure Bicep'
+                    description: 'Lift docker swarm in Azure servers'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    description: 'Upgrade to Kubernetes in Azure with AKS'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    description: 'Set up Hybrid infrastructure with Azure Arc'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    description: 'All applications in Azure Kubernetes with connection to in-house services'
                 }
 
             ]
@@ -252,37 +268,58 @@ export default {
         {
             name: 'Kubernetes introduction to FluxCD',
             description: 'Introduction to Kubernetes and FluxCD',
-            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+            imageUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flux.svg",
             steps:[
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
-                    description: 'Kubernetes'
-                },
+                    description: 'Created a centralized repository for all the cluster configurations'
+                }
+                ,
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
-                    description: 'Flux CD'
+                    description: 'Installed Flux CD on the cluster'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    description: 'Created repository and helm registry sources in flux'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    description: 'Created base configurations for all the services and environment specific configurations'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    description: 'Complete environment can be replicable in a new cluster with a simple git push'
                 }
             ]
         },
         {
             name: 'Serverless functions',
             description: 'Using lambda functions to solve critical issues',
-            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg',
             steps:[
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-                    description: 'Python'
+                    description: 'Python and C# based lambda functions'
                 },
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg',
-                    description: 'AWS'
+                    description: 'Reporting and data processing functions'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg',
+                    description: 'Temporary fixes for critical services while the team develops a more robust solution'
                 }
+
             ]
         },
         {
             name: 'Portfolio',
             description: 'My personal portfolio',
-            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vuedotjs.svg',
             steps:[
                 {
                     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/vuedotjs.svg',

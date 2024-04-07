@@ -32,6 +32,11 @@ const projects = globalData.projects;
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 1200px) {
+  .projects {
+    height: 100vh;
+  }
+}
 @media (max-width: 600px) {
   .projects {
     height: 100vh;
@@ -42,7 +47,7 @@ const projects = globalData.projects;
   width: 100vw;
   height: 60vh;
   display: flex;
-  column-gap: 10px;
+  column-gap: 20px;
   flex-direction: row;
   align-items: center;
   overflow-x: auto;
@@ -51,6 +56,7 @@ const projects = globalData.projects;
 @media (max-width: 600px) {
   .project-container {
     height: 85vh;
+    padding: 15px;
   }
 }
 

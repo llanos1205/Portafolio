@@ -31,21 +31,25 @@ export default {
 .jobs-container {
   position: relative; /* NEW: Make the jobs-container the reference for the absolute positioning of the pseudo-element */
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   display: flex;
-  row-gap: 30px;
-  column-gap: 10px;
+  column-gap: 20px;
   flex-direction: row;
   align-items: center;
   overflow-x: auto;
   white-space: nowrap;
 }
 
-
+@media (max-width: 1200px) {
+  .jobs-container {
+    height: 100vh;
+  }
+}
 
 @media (max-width: 600px) {
   .jobs-container {
     height: 100vh;
+    padding: 15px;
   }
 }
 </style>

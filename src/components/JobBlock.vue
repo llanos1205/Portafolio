@@ -62,21 +62,36 @@ export default {
 </script>
 <style scoped>
 .job-block {
+  width: 300px;
+  height: 300px;
   background-color: #1a4b84; /* Lighter tone than the background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Space inside the card */
   color: #f8f9fa; /* Text color */
-  min-width: 50vw; /* Adjust size as needed */
+  min-width: 30vw; /* Adjust size as needed */
   min-height: 40vh; /* Adjust size as needed */
   user-select: none;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
+  margin: 10px;
+}
+@media (max-width: 2400px) {
+  .job-block {
+    min-height: 40vh;
+    min-width: 30vw;
+  }
+}
+@media (max-width: 1200px) {
+  .job-block {
+    min-height: 70vh;
+    min-width: 60vw;
+  }
 }
 @media (max-width: 600px) {
   .job-block {
-    min-height: 85vh;
-    min-width: 100vw;
+    min-height: 90vh;
+    min-width: 90vw;
   }
 }
 .title {

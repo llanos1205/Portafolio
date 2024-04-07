@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible">
+    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px' }">
       <h2>{{ name }}</h2>
       <img :src="image" alt="Image">
       <p>{{ description }}</p>
     </div>
 
     <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible">
-      <div class="rectangle-card" v-for="(item, index) in items" :key="index">
-        <img :src="item.iconUrl" alt="Icon">
+      <div class="rectangle-card" v-for="(item, index) in items" :key="index" :style="{ fontSize: fontSize + 'px' }">
+      <img :src="item.iconUrl" alt="Icon">
         <p>{{ item.description }}</p>
       </div>
     </div>
@@ -25,8 +25,29 @@ export default {
   },
   data() {
     return {
-      isCard1Visible: true
+      isCard1Visible: true,
+      fontSize: 16 // Initial font size
     };
+  },
+  methods: {
+    adjustFontSize() {
+      const description = this.$refs.description;
+      const rectangleCard = this.$refs.rectangleCard;
+      const containerHeight = Math.min(description.clientHeight, rectangleCard.clientHeight);
+      const lineHeight = parseFloat(window.getComputedStyle(description.firstElementChild).lineHeight);
+      const lines = Math.floor(containerHeight / lineHeight);
+      const totalLines = Math.max(description.children.length, rectangleCard.children.length);
+      if (lines < totalLines) {
+        this.fontSize = (containerHeight / totalLines) * 0.9; // Adjust font size to fit all lines
+      }
+    }
+  },
+  mounted() {
+    this.adjustFontSize();
+    window.addEventListener('resize', this.adjustFontSize);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.adjustFontSize);
   }
 };
 </script>
@@ -34,21 +55,42 @@ export default {
 .card {
   width: 300px;
   height: 300px;
-  min-width: 50vw; /* Adjust size as needed */
+  min-width: 30vw; /* Adjust size as needed */
   min-height: 40vh; /* Adjust size as needed */
   border-radius: 10px;
   padding: 20px;
+  margin: 10px;
   cursor: pointer;
+}
+@media (max-width: 2400px) {
+  .card{
+    min-height: 40vh;
+    min-width: 30vw;
+  }
+}
+@media (max-width: 1200px) {
+  .card {
+    min-height: 70vh;
+    min-width: 60vw;
+  }
 }
 @media (max-width: 600px) {
   .card {
-    width: 100vw;
-    height: 85vh;
+    min-height: 85vh;
+    min-width: 90vw;
   }
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
 }
 
 .card-description {
   background-color: #4a4a4a; /* Darker background color for card 1 */
+  word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 .card-steps {
@@ -70,9 +112,11 @@ export default {
 .rectangle-card img {
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  margin: 25px;
 }
 .rectangle-card p {
   margin: 0;
+  word-wrap: break-word;
+  overflow-x: hidden;
 }
 </style>
