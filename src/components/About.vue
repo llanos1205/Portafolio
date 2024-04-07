@@ -19,7 +19,7 @@
     </div>
     <div class="photo">
       <!-- Replace 'photo-url.jpg' with the actual URL of your photo -->
-      <img src="https://media.licdn.com/dms/image/D5635AQFjhhW8mM_ivA/profile-framedphoto-shrink_200_200/0/1711445133196?e=1713013200&v=beta&t=hI6pUUdx1V88N8zcz5FgN1Eh5g8OBVZEkJAGzTsVjes" alt="Your Photo" class="photo-img" />
+      <img src="@/assets/side.png" alt="Your Photo" class="photo-img" />
     </div>
   </div>
 </template>
@@ -59,8 +59,8 @@ const title = "About Me";
 
 .photo-img {
   border-radius: 50%; /* Creates circular border */
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
+  width: 400px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
   object-fit: cover; /* Ensures the photo covers the entire circle */
 }
 </style>

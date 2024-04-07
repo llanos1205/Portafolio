@@ -29,16 +29,19 @@ export default {
 <style scoped>
 
 .jobs-container {
+  position: relative; /* NEW: Make the jobs-container the reference for the absolute positioning of the pseudo-element */
   width: 100vw;
-  height: 50vh;
+  height: 45vh;
   display: flex;
-  row-gap: 30px;
+
   column-gap: 10px;
   flex-direction: row;
   align-items: center;
   overflow-x: auto;
   white-space: nowrap;
 }
+
+
 
 @media (max-width: 600px) {
   .jobs-container {
