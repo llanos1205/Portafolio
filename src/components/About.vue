@@ -63,5 +63,11 @@ const title = "About Me";
   height: 400px; /* Adjust size as needed */
   object-fit: cover; /* Ensures the photo covers the entire circle */
 }
+@media (max-width: 600px) {
+  .photo-img {
+    width: 250px;
+    height: 250px;
+  }
+}
 </style>
 

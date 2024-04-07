@@ -37,7 +37,8 @@ export default {
       currentComponentIndex: 0,
       skills: globalData.skills,
       jobs: globalData.jobs,
-      socials: globalData.socials
+      socials: globalData.socials,
+      customScrollingEnabled: false // Add this line
     };
   },
   methods: {
@@ -50,24 +51,26 @@ export default {
         }
       });
     }
+
   },
   mounted() {
+    window.addEventListener('wheel', (event) => {
+      if (!this.customScrollingEnabled) return; // Add this line
 
-      window.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0) {
-          // Scrolling down
-          if (this.currentComponentIndex < this.components.length - 1) {
-            this.currentComponentIndex++;
-          }
-        } else {
-          // Scrolling up
-          if (this.currentComponentIndex > 0) {
-            this.currentComponentIndex--;
-          }
+      if (event.deltaY > 0) {
+        // Scrolling down
+        if (this.currentComponentIndex < this.components.length - 1) {
+          this.currentComponentIndex++;
         }
-        this.scrollToComponent(this.components[this.currentComponentIndex]);
-      });
-    }
+      } else {
+        // Scrolling up
+        if (this.currentComponentIndex > 0) {
+          this.currentComponentIndex--;
+        }
+      }
+      this.scrollToComponent(this.components[this.currentComponentIndex]);
+    });
+  }
 
 };
 </script>

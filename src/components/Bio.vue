@@ -60,6 +60,12 @@ const goToProfile = (url) => {
   object-fit: cover;/* Ensures the photo covers the entire area */
 }
 
+@media (max-width: 600px) {
+  .small-photo {
+    width: 250px;
+    height: 250px;
+  }
+}
 .social-buttons {
   column-gap: 5px;
   display: flex;

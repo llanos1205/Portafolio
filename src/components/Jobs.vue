@@ -31,9 +31,9 @@ export default {
 .jobs-container {
   position: relative; /* NEW: Make the jobs-container the reference for the absolute positioning of the pseudo-element */
   width: 100vw;
-  height: 45vh;
+  height: 50vh;
   display: flex;
-
+  row-gap: 30px;
   column-gap: 10px;
   flex-direction: row;
   align-items: center;

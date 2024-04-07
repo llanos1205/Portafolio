@@ -223,5 +223,85 @@ export default {
             iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powershell.svg",
             level: 0.60
         }
-    ]
+    ],
+    projects: [
+        {
+            name: 'Migration from ompremise to cloud',
+            description: 'Migration from on-premise infrastructure to cloud',
+            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/progress.svg',
+            steps:[
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg',
+                    description: 'Azure AKS'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    description: 'Azure Arc'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    description: 'Terraform'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    description: 'Azure Bicep'
+                }
+
+            ]
+        },
+        {
+            name: 'Kubernetes introduction to FluxCD',
+            description: 'Introduction to Kubernetes and FluxCD',
+            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+            steps:[
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+                    description: 'Kubernetes'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    description: 'Flux CD'
+                }
+            ]
+        },
+        {
+            name: 'Serverless functions',
+            description: 'Using lambda functions to solve critical issues',
+            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+            steps:[
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                    description: 'Python'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg',
+                    description: 'AWS'
+                }
+            ]
+        },
+        {
+            name: 'Portfolio',
+            description: 'My personal portfolio',
+            imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            steps:[
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/vuedotjs.svg',
+                    description: 'Create a Vue App'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/github.svg',
+                    description: 'Create a GitHub Repository'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/githubactions.svg',
+                    description: 'Push it with actions'
+                },
+                {
+                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/githubpages.svg',
+                    description: 'Serve it with Github Pages'
+                }
+            ]
+
+        }
+        ]
 };
