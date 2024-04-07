@@ -11,21 +11,6 @@ export default {
       required: true
     }
   },
-  // mounted() {
-  //   const grid = this.$el.querySelector('.grid');
-  //   grid.addEventListener('scroll', () => {
-  //     if (grid.scrollTop > 0) {
-  //       grid.classList.add('scrolling');
-  //     } else {
-  //       grid.classList.remove('scrolling');
-  //     }
-  //   });
-  //
-  //   // Prevent propagation of wheel event
-  //   grid.addEventListener('wheel', (event) => {
-  //     event.stopPropagation();
-  //   });
-  // },
 };
 </script>
 
@@ -46,7 +31,7 @@ export default {
   display: grid;
   column-gap: 30px;
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;
+  //sscrollbar-width: none;
   grid-template-columns: repeat(8, minmax(100px, 1fr));
   overflow-x: auto;
   position: relative;

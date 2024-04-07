@@ -28,6 +28,7 @@ export default {
 .construction p {
   font-size: 18px;
   margin-top: 20px;
+  padding: 0 20px;
 }
 @media (max-width: 600px) {
   .construction {
