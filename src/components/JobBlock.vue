@@ -66,7 +66,7 @@ export default {
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Space inside the card */
   color: #f8f9fa; /* Text color */
-  min-width: 90vw; /* Adjust size as needed */
+  min-width: 50vw; /* Adjust size as needed */
   min-height: 40vh; /* Adjust size as needed */
   user-select: none;
   -webkit-user-select: none; /* Safari */
@@ -76,6 +76,7 @@ export default {
 @media (max-width: 600px) {
   .job-block {
     min-height: 85vh;
+    min-width: 100vw;
   }
 }
 .title {

@@ -1,2 +1,19 @@
 @import './base.css';
 
+:root {
+    /* Gradient color palette */
+    --scale-1: #E0F2FF;
+    --scale-2: #C7D2EB;
+    --scale-3: #82C0EB;
+    --scale-4: #6495ED;
+    --scale-5: #46597F;
+    --scale-6: #2F4F4F;
+
+    /* Text colors for each scale */
+    --text-color-scale-1: #000000;
+    --text-color-scale-2: #000000;
+    --text-color-scale-3: #FFFFFF;
+    --text-color-scale-4: #FFFFFF;
+    --text-color-scale-5: #FFFFE0;
+    --text-color-scale-6: #FFFFFF;
+}
