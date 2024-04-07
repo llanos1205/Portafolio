@@ -1,10 +1,32 @@
-<script setup>
-import SkillBlock from "@/components/SkillBlock.vue";
+<script>
 
-const props = defineProps({
-  skills: Array
-});
-
+import SkillBlock from './SkillBlock.vue';
+export default {
+  components: {
+    SkillBlock
+  },
+  props : {
+    skills: {
+      type: Array,
+      required: true
+    }
+  },
+  // mounted() {
+  //   const grid = this.$el.querySelector('.grid');
+  //   grid.addEventListener('scroll', () => {
+  //     if (grid.scrollTop > 0) {
+  //       grid.classList.add('scrolling');
+  //     } else {
+  //       grid.classList.remove('scrolling');
+  //     }
+  //   });
+  //
+  //   // Prevent propagation of wheel event
+  //   grid.addEventListener('wheel', (event) => {
+  //     event.stopPropagation();
+  //   });
+  // },
+};
 </script>
 
 <template>
@@ -13,7 +35,7 @@ const props = defineProps({
       <h1>Skills</h1>
     </div>
     <div class="grid" >
-      <SkillBlock v-for="(skill, index) in props.skills" :key="index" :name="skill.name" :icon-url="skill.iconUrl" :level="skill.level"  />
+      <SkillBlock v-for="(skill, index) in $props.skills" :key="index" :name="skill.name" :icon-url="skill.iconUrl" :level="skill.level"  />
     </div>
   </div>
 
@@ -23,10 +45,28 @@ const props = defineProps({
 .grid {
   display: grid;
   column-gap: 30px;
-
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
   grid-template-columns: repeat(8, minmax(100px, 1fr));
   overflow-x: auto;
+  position: relative;
+  //mask-image: linear-gradient(to bottom, transparent 10%, black 25%, black 75%, transparent 90%);
 
+
+}
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+.grid::before {
+  top: 100px;
+  background: linear-gradient(to bottom, #144272, transparent);
+}
+
+.grid::after {
+  bottom: 0;
+  background: linear-gradient(to top, #144272, transparent);
 }
 @media (max-width: 1200px) {
   .grid {
