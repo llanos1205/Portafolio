@@ -1,7 +1,7 @@
 <template>
   <div class="skill-block" @mouseover="toggleRectangle" @mouseleave="hideRectangle">
     <div class="square-wrapper">
-      <div class="square">
+      <div class="square" :style="{background:backgroundColor}">
         <img :src="iconUrl" alt="Icon" class="icon" />
       </div>
       <div v-if="showRectangle" class="rectangle" :style="{ width: rectangleWidth, height: rectangleHeight, top: rectangleTop }">
@@ -39,6 +39,20 @@ export default {
       fillColor: "transparent"
     };
   },
+  computed: {
+    backgroundColor: () => {
+      return backgroundColor;
+    },
+    secondaryColor: () => {
+      return secondaryColor;
+    },
+    textColor: () => {
+      return textColor;
+    },
+    secondaryTextColor: () => {
+      return secondaryTextColor;
+    }
+  },
   methods: {
       toggleRectangle() {
         this.showRectangle = true;
@@ -63,6 +77,12 @@ export default {
     }
   }
 };
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-3');
+const secondaryColor = style.getPropertyValue('--scale-4');
+const textColor = style.getPropertyValue('--text-color-scale-3');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-4');
+
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="job-block" @click="showAllTools = !showAllTools">
+  <div class="job-block" @click="showAllTools = !showAllTools" :style="{backgroundColor:backgroundColor}">
     <h2 class="title">{{ company }} - {{ role }}</h2>
     <p class="duration">{{ startDate }} - {{ endDate }}</p>
     <ul class="description" ref="description">
@@ -50,6 +50,18 @@ export default {
     window.removeEventListener('resize', this.adjustFontSize);
   },
   computed: {
+    backgroundColor() {
+      return backgroundColor;
+    },
+    secondaryColor() {
+      return secondaryColor;
+    },
+    textColor() {
+      return textColor;
+    },
+    secondaryTextColor() {
+      return secondaryTextColor;
+    },
     displayedTools() {
       if (this.showAllTools) {
         return this.tools;
@@ -59,6 +71,12 @@ export default {
     }
   }
 };
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-4');
+const secondaryColor = style.getPropertyValue('--scale-5');
+const textColor = style.getPropertyValue('--text-color-scale-4');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
+
 </script>
 <style scoped>
 .job-block {

@@ -11,11 +11,31 @@ export default {
       required: true
     }
   },
+  computed:{
+    backgroundColor: () => {
+      return backgroundColor;
+    },
+    secondaryColor: () => {
+      return secondaryColor;
+    },
+    textColor: () => {
+      return textColor;
+    },
+    secondaryTextColor: () => {
+      return secondaryTextColor;
+    }
+  }
 };
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-2');
+const secondaryColor = style.getPropertyValue('--scale-3');
+const textColor = style.getPropertyValue('--text-color-scale-2');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
+
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" :style="{background:backgroundColor, color:textColor}" >
     <div class="title">
       <h1>Skills</h1>
     </div>

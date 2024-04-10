@@ -1,13 +1,13 @@
 <template>
   <div id="app">
 
-    <UnderConstruction ref="underConstruction" />
+
     <Bio ref="bio" :socials="socials" />
     <SkillGrid ref="skillGrid" :skills="skills" />
     <Jobs ref="jobs" :jobs="jobs" />
     <Projects ref="projects" />
     <About ref="aboutMe" />
-
+    <UnderConstruction ref="underConstruction" />
 
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      components: ['underConstruction', 'bio', 'skillGrid','jobs', 'projects','aboutMe'],
+      components: [ 'bio', 'skillGrid','jobs', 'projects','aboutMe','underConstruction'],
       currentComponentIndex: 0,
       skills: globalData.skills,
       jobs: globalData.jobs,

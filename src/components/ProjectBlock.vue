@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px' }">
+    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:textColor }">
       <h2>{{ name }}</h2>
       <img :src="image" alt="Image">
       <p>{{ description }}</p>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import globalData from "@/scripts/globalData.js";
+
 export default {
   props: {
     name: String,
@@ -42,14 +44,37 @@ export default {
       }
     }
   },
+
   mounted() {
+
     this.adjustFontSize();
     window.addEventListener('resize', this.adjustFontSize);
+
+  },
+  computed: {
+    backgroundColor() {
+      return backgroundColor;
+    },
+    secondaryColor() {
+      return secondaryColor;
+    },
+    textColor() {
+      return textColor;
+    },
+    secondaryTextColor() {
+      return secondaryTextColor;
+    }
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.adjustFontSize);
   }
 };
+const projects = globalData.projects;
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-5');
+const secondaryColor = style.getPropertyValue('--scale-6');
+const textColor = style.getPropertyValue('--text-color-scale-5');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 </script>
 <style scoped>
 .card {
