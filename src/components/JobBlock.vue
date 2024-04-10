@@ -95,6 +95,10 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   -ms-user-select: none;
    margin: 10px;
 }
+
+.job-block ul {
+  padding: 20px; /* Space to the left of the list */
+}
 @media (max-width: 2000px) {
   .job-block {
     min-height: 40vh;

@@ -3,6 +3,7 @@
     <div class="title">
       <h1>Work Experience</h1>
       <p>Here are some of the companies I had the opportunity to work with :</p>
+      <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
 
     </div>
     <div class="jobs-container" :style="{backgroundColor:backgroundColor}">

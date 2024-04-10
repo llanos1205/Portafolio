@@ -38,6 +38,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   <div class="container" :style="{background:backgroundColor, color:textColor}" >
     <div class="title">
       <h1>Skills</h1>
+      <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
     </div>
     <div class="grid" >
       <SkillBlock v-for="(skill, index) in $props.skills" :key="index" :name="skill.name" :icon-url="skill.iconUrl" :level="skill.level"  />

@@ -1,12 +1,11 @@
 <template>
   <div>
-    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:textColor }">
+    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:secondaryTextColor }">
       <h2>{{ name }}</h2>
       <img :src="image" alt="Image">
       <p>{{ description }}</p>
     </div>
-
-    <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible">
+    <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible" :style="{ backgroundColor:backgroundColor,color:secondaryTextColor }">
       <div class="rectangle-card" v-for="(item, index) in items" :key="index" :style="{ fontSize: fontSize + 'px' }">
       <img :src="item.iconUrl" alt="Icon">
         <p>{{ item.description }}</p>
@@ -77,6 +76,8 @@ const textColor = style.getPropertyValue('--text-color-scale-5');
 const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 </script>
 <style scoped>
+
+
 .card {
   width: 300px;
   height: 300px;
@@ -144,7 +145,8 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   margin: 15px;
 }
 .rectangle-card p {
-  margin: 5px;
+  padding: 10px;
+  margin-right: 10px;
   text-align: justify;
   word-wrap: break-word;
   overflow-x: hidden;

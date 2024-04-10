@@ -33,6 +33,11 @@ export default {
   margin-top: 20px;
   padding: 0 20px;
 }
+
+.construction h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 @media (max-width: 600px) {
   .construction {
     height: 100vh;

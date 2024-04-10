@@ -9,17 +9,17 @@ export default {
     },
     socials: [
         {
-            imageUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg",
+            imageUrl: "https://cdn.simpleicons.org/linkedin/white",
             name: 'LinkedIn',
             profileUrl: 'https://www.linkedin.com/in/diego-alejandro-llanos-gareca-b516a6195'
         },
         {
-            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg',
+            imageUrl: 'https://cdn.simpleicons.org/github/white',
             name: 'Github',
             profileUrl: 'https://github.com/llanos1205'
         },
         {
-            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg',
+            imageUrl: 'https://cdn.simpleicons.org/facebook/white',
             name: 'Facebook',
             profileUrl: 'https://www.facebook.com/diego.llanosgareca'
         }
@@ -35,10 +35,10 @@ export default {
                 'Build pipelines in github actions for C# .Net core and react web applications and deploy in GCP with terraform and docker'
             ],
             tools: [
-                { name: 'Google Cloud', color: '#4285F4' },
-                { name: 'C#', color: '#68217A' },
+                { name: 'Google Cloud', color: '#00FF00' },
+                { name: 'C#', color: '#CC2927' },
                 { name: 'GitHub Actions', color: '#FFFFFF' },
-                { name: 'Terraform', color: '#5C4EE5' }
+                { name: 'Terraform', color: '#CC2927' }
             ]
         },
         {
@@ -57,17 +57,17 @@ export default {
                 [
                     { "name": "Python", "color": "#4EAA25" },
                     { "name": "AWS", "color": "#FF9900" },
-                    { "name": "Kubernetes", "color": "#326CE5" },
+                    { "name": "Kubernetes", "color": "#FFFFFF" },
                     { "name": "Flux CD", "color": "#1A1918" },
-                    { "name": "Helm", "color": "#277A9F" },
-                    { "name": "Terraform", "color": "#5C4EE5" },
+                    { "name": "Helm", "color": "#FFFFFF" },
+                    { "name": "Terraform", "color": "#CC2927" },
                     { "name": "GitHub Actions", "color": "#FFFFFF" },
-                    { "name": "Azure DevOps", "color": "#0078D7" },
+                    { "name": "Azure DevOps", "color": "#FF0000" },
                     { "name": "Nginx", "color": "#269539" },
-                    { "name": "IIS", "color": "#5A25A2" },
+                    { "name": "IIS", "color": "#CC2927" },
                     { "name": "Bash", "color": "#4EAA25" },
-                    { "name": "Powershell", "color": "#5391FE" },
-                    { "name": "Bitbucket CI", "color": "#205081" }
+                    { "name": "Powershell", "color": "#FF0000" },
+                    { "name": "Bitbucket CI", "color": "#FFA500" }
                 ]
         },
         {
@@ -81,15 +81,15 @@ export default {
             ],
             tools:
                 [
-                    { "name": "C#", "color": "#68217A" },
-                    { "name": "Azure", "color": "#0089D6" },
-                    { "name": "Azure DevOps", "color": "#0078D7" },
-                    { "name": "Docker", "color": "#2496ED" },
-                    { "name": "Kubernetes", "color": "#326CE5" },
-                    { "name": "Azure Bicep", "color": "#00AEEF" },
+                    { "name": "C#", "color": "#CC2927" },
+                    { "name": "Azure", "color": "#FFFF00" },
+                    { "name": "Azure DevOps", "color": "#FFA500" },
+                    { "name": "Docker", "color": "#00FF00" },
+                    { "name": "Kubernetes", "color": "#FFFFFF" },
+                    { "name": "Azure Bicep", "color": "#00FFFF" },
                     { "name": "Nginx", "color": "#269539" },
                     { "name": "SQL Server", "color": "#CC2927" },
-                    { "name": "Powershell", "color": "#5391FE" }
+                    { "name": "Powershell", "color": "#FFFFFF" }
                 ]
 
         },
@@ -107,159 +107,159 @@ export default {
     skills: [
         {
             name: "AWS",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg",
+            iconUrl: "https://cdn.simpleicons.org/amazonaws/white",
             level: 1.0
         },
         {
             name: "Azure",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg",
+            iconUrl: "https://cdn.simpleicons.org/microsoftazure/white",
             level: 0.8
         },
         {
             name: "Google Cloud",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlecloud.svg",
+            iconUrl: "https://cdn.simpleicons.org/googlecloud/white",
             level: 0.3
         },
         {
             name: "Docker",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg",
+            iconUrl: "https://cdn.simpleicons.org/docker/white",
             level: 1.0
         },
         {
             name: "Kubernetes",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kubernetes.svg",
+            iconUrl: "https://cdn.simpleicons.org/kubernetes/white",
             level: 0.9
         },
         {
             name: "Flux CD",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flux.svg",
+            iconUrl: "https://cdn.simpleicons.org/flux/white",
             level: 0.8
         },
         {
             name: "Helm",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/helm.svg",
+            iconUrl: "https://cdn.simpleicons.org/helm/white",
             level: 0.6
         },
         {
             name: "Docker Swarm",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg",
+            iconUrl: "https://cdn.simpleicons.org/docker/white",
             level: 0.7
         },
         {
             name: "Terraform",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform.svg",
+            iconUrl: "https://cdn.simpleicons.org/terraform/white",
             level: 0.8
         },
         {
             name: "Azure Bicep",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg",
+            iconUrl: "https://cdn.simpleicons.org/microsoftazure/white",
             level: 0.6
         },
         {
             name: "Jenkins",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jenkins.svg",
+            iconUrl: "https://cdn.simpleicons.org/jenkins/white",
             level: 0.35
         },
         {
             name: "Bitbucket CI",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bitbucket.svg",
+            iconUrl: "https://cdn.simpleicons.org/bitbucket/white",
             level: 0.4
         },
         {
             name: "GitHub Actions",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/githubactions.svg",
+            iconUrl: "https://cdn.simpleicons.org/githubactions/white",
             level: 0.9
         },
         {
             name: "Azure DevOps",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azuredevops.svg",
+            iconUrl: "https://cdn.simpleicons.org/azuredevops/white",
             level: 1.0
         },
         {
             name: "Nginx",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nginx.svg",
+            iconUrl: "https://cdn.simpleicons.org/nginx/white",
             level: 0.8
         },
         {
             name: "IIS",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/internetexplorer.svg",
+            iconUrl: "https://cdn.simpleicons.org/internetexplorer/white",
             level: 0.6
         },
         {
             name: "SQL Server",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftsqlserver.svg",
+            iconUrl: "https://cdn.simpleicons.org/microsoftsqlserver/white",
             level: 0.7
         },
         {
             name: "Mongo DB",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mongodb.svg",
+            iconUrl: "https://cdn.simpleicons.org/mongodb/white",
             level: 0.7
         },
         {
             name: "C# .NET",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/dotnet.svg",
+            iconUrl: "https://cdn.simpleicons.org/dotnet/white",
             level: 0.55
         },
         {
             name: "Python",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg",
+            iconUrl: "https://cdn.simpleicons.org/python/white",
             level: 0.8
         },
         {
             name: "Vue",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vuedotjs.svg",
+            iconUrl: "https://cdn.simpleicons.org/vuedotjs/white",
             level: 0.01
         },
         {
             name: "Flutter",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flutter.svg",
+            iconUrl: "https://cdn.simpleicons.org/flutter/white",
             level: 0.2
         },
         {
             name: "Bash",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gnubash.svg",
+            iconUrl: "https://cdn.simpleicons.org/gnubash/white",
             level: 0.8
         },
         {
             name: "Powershell",
-            iconUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powershell.svg",
+            iconUrl: "https://cdn.simpleicons.org/powershell/white",
             level: 0.60
         }
     ],
     projects: [
         {
             name: 'Migration from on-premise to cloud',
-            description: 'Migration from on-premise infrastructure to cloud',
-            imageUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kubernetes.svg",
+            description: 'Had the opportunity to migrate a company from on-premise infrastructure mostly based on IIS hosted services into a cloud based infrastructure with a hybrid Kubernetes cluster',
+            imageUrl: "https://cdn.simpleicons.org/kubernetes/white",
             steps:[
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/linux/white',
                     description: 'Initial On premise infrastructure'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/docker/white',
                     description: 'Dockerize applications to scape from IIS'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/terraform/white',
                     description: 'Terraform to create infrastructure in Azure'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/docker/white',
                     description: 'Lift docker swarm in Azure servers'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/kubernetes/white',
                     description: 'Upgrade to Kubernetes in Azure with AKS'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azure-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/microsoftazure/white',
                     description: 'Set up Hybrid infrastructure with Azure Arc'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/terraform-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/microsoftazure/white',
                     description: 'All applications in Azure Kubernetes with connection to in-house services'
                 }
 
@@ -267,50 +267,50 @@ export default {
         },
         {
             name: 'Kubernetes introduction to FluxCD',
-            description: 'Introduction to Kubernetes and FluxCD',
-            imageUrl: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flux.svg",
+            description: 'Brought GitOps to the company with FluxCD and Helm allowing pull based deployments and versioned cluster configurations across environments. Now complete environments can be replicated in matter of seconds',
+            imageUrl: "https://cdn.simpleicons.org/flux/white",
             steps:[
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/git/white',
                     description: 'Created a centralized repository for all the cluster configurations'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/flux/white',
                     description: 'Installed Flux CD on the cluster'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/helm/white',
                     description: 'Created repository and helm registry sources in flux'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/kubernetes/white',
                     description: 'Created base configurations for all the services and environment specific configurations'
                 }
                 ,
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flux/flux-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/flux/white',
                     description: 'Complete environment can be replicable in a new cluster with a simple git push'
                 }
             ]
         },
         {
             name: 'Serverless functions',
-            description: 'Using lambda functions to solve critical issues',
-            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/awslambda.svg',
+            description: 'Using lambda functions to solve critical issues, not letting the scripting skills go to waste',
+            imageUrl: 'https://cdn.simpleicons.org/awslambda/white',
             steps:[
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/python/white',
                     description: 'Python and C# based lambda functions'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/microsoftsqlserver/white',
                     description: 'Reporting and data processing functions'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/awslambda/white',
                     description: 'Temporary fixes for critical services while the team develops a more robust solution'
                 }
 
@@ -318,25 +318,60 @@ export default {
         },
         {
             name: 'Portfolio',
-            description: 'My personal portfolio',
-            imageUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vuedotjs.svg',
+            description: 'My personal portfolio, although front end is not my strong suit, I wanted to have a place to showcase my work and skills',
+            imageUrl: 'https://cdn.simpleicons.org/vuedotjs/white',
             steps:[
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/vuedotjs.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/vuedotjs/white',
                     description: 'Create a Vue App'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/github.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/github/white',
                     description: 'Create a GitHub Repository'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/githubactions.svg',
-                    description: 'Push it with actions'
+                    iconUrl: 'https://cdn.simpleicons.org/githubactions/white',
+                    description: 'Push it with github actions'
                 },
                 {
-                    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/githubpages.svg',
+                    iconUrl: 'https://cdn.simpleicons.org/githubpages/white',
                     description: 'Serve it with Github Pages'
                 }
+            ]
+
+        },
+        {
+            name: 'Storage solutions',
+            description: 'The backend developer in a project to create a storage solution for a company, here I had to create both the backend and the infrastructure. I hope is still running ! https://cloud.sourceinfinity.co',
+            imageUrl: 'https://cdn.simpleicons.org/csharp/white',
+            steps:[
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/github/white',
+                    description: 'Create a GitHub Repository'
+                },
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/vuedotjs/white',
+                    description: 'Created a C# web api'
+                },
+
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/githubactions/white',
+                    description: 'Push it with github actions'
+                },
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/terraform/white',
+                    description: 'Create infrastructure with terraform'
+                },
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/googlecloud/white',
+                    description: 'Lifted servers in Google Cloud'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/docker/white',
+                    description: 'Deployed the application using docker'
+                }
+
             ]
 
         }

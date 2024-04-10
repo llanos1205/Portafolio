@@ -3,6 +3,7 @@
     <div class="title">
       <h1>Projects</h1>
       <p>Here are some of the projects I've worked on:</p>
+      <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
     </div>
     <div class="project-container">
       <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" >

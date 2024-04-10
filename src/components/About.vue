@@ -36,7 +36,7 @@ const title = "About Me";
   height: 50vh;
   display: flex;
   align-items: center;
-  background: black;
+  background: #232222;
   flex-direction: row; /* Arrange items side by side in larger screens */
 }
 
