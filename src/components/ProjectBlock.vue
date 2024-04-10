@@ -32,23 +32,23 @@ export default {
     };
   },
   methods: {
-    adjustFontSize() {
-      const description = this.$refs.description;
-      const rectangleCard = this.$refs.rectangleCard;
-      const containerHeight = Math.min(description.clientHeight, rectangleCard.clientHeight);
-      const lineHeight = parseFloat(window.getComputedStyle(description.firstElementChild).lineHeight);
-      const lines = Math.floor(containerHeight / lineHeight);
-      const totalLines = Math.max(description.children.length, rectangleCard.children.length);
-      if (lines < totalLines) {
-        this.fontSize = (containerHeight / totalLines) * 0.9; // Adjust font size to fit all lines
-      }
-    }
+    // adjustFontSize() {
+    //   const description = this.$refs.description;
+    //   const rectangleCard = this.$refs.rectangleCard;
+    //   const containerHeight = Math.min(description.clientHeight, rectangleCard.clientHeight);
+    //   const lineHeight = parseFloat(window.getComputedStyle(description.firstElementChild).lineHeight);
+    //   const lines = Math.floor(containerHeight / lineHeight);
+    //   const totalLines = Math.max(description.children.length, rectangleCard.children.length);
+    //   if (lines < totalLines) {
+    //     this.fontSize = (containerHeight / totalLines) * 0.9; // Adjust font size to fit all lines
+    //   }
+    // }
   },
 
   mounted() {
 
-    this.adjustFontSize();
-    window.addEventListener('resize', this.adjustFontSize);
+    // this.adjustFontSize();
+    // window.addEventListener('resize', this.adjustFontSize);
 
   },
   computed: {
@@ -86,8 +86,12 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   padding: 20px;
   margin: 10px;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
 }
-@media (max-width: 2400px) {
+@media (max-width: 2000px) {
   .card{
     min-height: 40vh;
     min-width: 30vw;
@@ -101,7 +105,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 }
 @media (max-width: 600px) {
   .card {
-    min-height: 85vh;
+    min-height: 80vh;
     min-width: 90vw;
   }
 }
@@ -137,10 +141,11 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 .rectangle-card img {
   width: 50px;
   height: 50px;
-  margin: 25px;
+  margin: 15px;
 }
 .rectangle-card p {
-  margin: 0;
+  margin: 5px;
+  text-align: justify;
   word-wrap: break-word;
   overflow-x: hidden;
 }

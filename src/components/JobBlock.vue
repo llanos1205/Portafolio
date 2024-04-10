@@ -79,6 +79,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 
 </script>
 <style scoped>
+
 .job-block {
   width: 300px;
   height: 300px;
@@ -92,9 +93,9 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
-  margin: 10px;
+   margin: 10px;
 }
-@media (max-width: 2400px) {
+@media (max-width: 2000px) {
   .job-block {
     min-height: 40vh;
     min-width: 30vw;
@@ -108,7 +109,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 }
 @media (max-width: 600px) {
   .job-block {
-    min-height: 90vh;
+    min-height: 80vh;
     min-width: 90vw;
   }
 }
