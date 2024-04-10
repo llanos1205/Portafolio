@@ -2,12 +2,12 @@
   <div class="jobs" :style="{backgroundColor:backgroundColor,color:textColor}">
     <div class="title">
       <h1>Work Experience</h1>
-      <p>Here are some of the companies I had the opportunity to work with :</p>
+      <p>Companies I had the opportunity to work with :</p>
       <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
 
     </div>
     <div class="jobs-container" :style="{backgroundColor:backgroundColor}">
-      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" >
+      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500" >
         <Slide v-for="(job, index) in jobs" :key="index">
           <JobBlock
               :company="job.company"
@@ -19,6 +19,10 @@
               class="carousel__item"
           />
         </Slide>
+        <template #addons>
+          <Navigation/>
+          <Pagination />
+        </template>
       </Carousel>
     </div>
   </div>
@@ -26,7 +30,7 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import JobBlock from './JobBlock.vue';
 import 'vue3-carousel/dist/carousel.css'
@@ -34,7 +38,9 @@ export default {
   components: {
     JobBlock,
     Carousel,
-    Slide
+    Slide,
+    Pagination,
+    Navigation,
   },
   props: {
     jobs: Array
@@ -89,7 +95,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-4');
 <style scoped>
 .title {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 .jobs {
   width: 100vw;

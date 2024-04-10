@@ -7,8 +7,8 @@
         {{ point }}
       </li>
     </ul>
-    <ul class="tools">
-      <li v-for="(tool, index) in displayedTools" :key="index" class="tool" :style="{ color: tool.color }">#{{ tool.name }}</li>
+    <ul class="tools" >
+      <li v-for="(tool, index) in displayedTools" :key="index" class="tool" :style="{ backgroundColor:secondaryColor,color:textColor }">#{{ tool.name }}</li>
     </ul>
   </div>
 </template>
@@ -146,12 +146,17 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 .tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   list-style-type: none; /* Remove bullet points */
 }
 
 .tool {
-  color: #000000; /* Different text color */
+  display: inline-block; /* To apply padding and other box properties */
+  padding: 5px 10px; /* Space around the text */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f9fa; /* Background color */
+  color: #000000; /* Text color */
+  margin: 5px; /* Space around each tool */
 }
 
 </style>

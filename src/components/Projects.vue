@@ -6,7 +6,7 @@
       <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
     </div>
     <div class="project-container">
-      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" >
+      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500" >
         <Slide v-for="(project, index) in projects" :key="index">
 
       <ProjectBlock
@@ -18,6 +18,10 @@
           class="carousel__item"
       />
         </Slide>
+        <template #addons>
+          <Navigation />
+          <Pagination />
+        </template>
       </Carousel>
     </div>
   </div>
@@ -26,7 +30,7 @@
 <script>
 import ProjectBlock from './ProjectBlock.vue';
 import globalData from '../scripts/globalData.js';
-import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 const projects = globalData.projects;
 
@@ -37,8 +41,9 @@ export default {
   components: {
     ProjectBlock,
     Carousel,
+    Slide,
+    Pagination,
     Navigation,
-    Slide
   },
   data() {
 
@@ -95,7 +100,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 
 .title {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .projects {
