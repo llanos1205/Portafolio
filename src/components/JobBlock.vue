@@ -1,5 +1,6 @@
 <template>
   <div class="job-block" @click="showAllTools = !showAllTools" :style="{backgroundColor:backgroundColor}">
+    <div class="content">
     <h2 class="title">{{ company }} - {{ role }}</h2>
     <p class="duration">{{ startDate }} - {{ endDate }}</p>
     <ul class="description" ref="description">
@@ -7,7 +8,8 @@
         {{ point }}
       </li>
     </ul>
-    <ul class="tools" >
+    </div>
+    <ul class="tools"  :style="{backgroundColor:backgroundColor}">
       <li v-for="(tool, index) in displayedTools" :key="index" class="tool" :style="{ backgroundColor:secondaryColor,color:textColor }">#{{ tool.name }}</li>
     </ul>
   </div>
@@ -66,7 +68,7 @@ export default {
       if (this.showAllTools) {
         return this.tools;
       } else {
-        return this.tools.slice(0, 4);
+        return this.tools.slice(0, 3);
       }
     }
   }
@@ -94,6 +96,18 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
    margin: 10px;
+  display: flex;
+  position: relative;
+
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content {
+  /* ...existing styles... */
+  position: relative; /* Make the content a relative container */
+  z-index: 1;
+  order: 2;
 }
 
 .job-block ul {
@@ -144,10 +158,17 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 }
 
 .tools {
+  order: 1;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5px;
+  margin-top: auto;
   gap: 5px;
-  list-style-type: none; /* Remove bullet points */
+  position: absolute; /* Make the tools an absolute container */
+  bottom: 0;
+  list-style-type: none;
+  z-index: 2;
+  /* Remove bullet points */
 }
 
 .tool {
