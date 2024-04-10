@@ -2,18 +2,25 @@
 
 :root {
     /* Gradient color palette */
-    --scale-1: #E0F2FF;
-    --scale-2: #C7D2EB;
-    --scale-3: #82C0EB;
-    --scale-4: #6495ED;
-    --scale-5: #46597F;
-    --scale-6: #2F4F4F;
+    --scale-1: #0A2647;
+    --scale-2: #144272;
+    --scale-3: #205295;
+    --scale-4: #2C74B3;
+    --scale-5: #3A9AD9;
+    --scale-6: #4EB3E8;
 
     /* Text colors for each scale */
-    --text-color-scale-1: #000000;
-    --text-color-scale-2: #000000;
+    --text-color-scale-1: #FFFFFF;
+    --text-color-scale-2: #FFFFFF;
     --text-color-scale-3: #FFFFFF;
     --text-color-scale-4: #FFFFFF;
-    --text-color-scale-5: #FFFFE0;
+    --text-color-scale-5: #000000;
     --text-color-scale-6: #FFFFFF;
 }
+
+/*Scale-1 ( #E0F2FF ): Use --text-color-scale-1 ( #000000, black ). Black will provide good contrast on the lightest shade of blue.*/
+/*Scale-2 ( #C7D2EB ): Use --text-color-scale-1 ( #000000, black ). Similar to scale-1, black offers good contrast on this light blue shade.*/
+/*Scale-3 ( #82C0EB ): Use --text-color-scale-3 ( #FFFFFF, white ). As the blue gets darker, white text ensures better readability.*/
+/*Scale-4 ( #6495ED ): Use --text-color-scale-4 ( #FFFFFF, white ). Similar to scale-3, white maintains readability on the mid-tone blue.*/
+/*Scale-5 ( #46597F ): Use --text-color-scale-5 ( #FFFFE0, off-white ). This light shade of yellow provides some contrast on the dark blue, but for optimal accessibility, consider using a slightly darker shade.*/
+/*Scale-6 ( #2F4F4F ): Use --text-color-scale-6 ( #FFFFFF, white ). White offers the best contrast on the darkest blue shade.*/

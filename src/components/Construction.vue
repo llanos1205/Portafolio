@@ -1,7 +1,10 @@
 <template>
   <div class="construction">
     <h1>This site is Under Construction</h1>
-    <p>I'll update this portfolio if I ever learn how to code in Vue</p>
+    <p>Hello! nice to see you reached the bottom of this portfolio</p>
+    <p>As you may see this page isn't the most glamorous display of UI and UX skills</p>
+    <p>And that's because I am not a FrontEnd Engineer or a UI/UX designer, this is an art that goes beyond me</p>
+    <p>This site will continue to be in progress as I learn more Vue on my free time</p>
   </div>
 </template>
 

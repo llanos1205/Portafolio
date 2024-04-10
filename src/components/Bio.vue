@@ -6,17 +6,23 @@ const props = defineProps({
 const goToProfile = (url) => {
   window.open(url, '_blank');
 };
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-1');
+const secondaryColor = style.getPropertyValue('--scale-2');
+const textColor = style.getPropertyValue('--text-color-scale-1');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
+// Replace '--scale-4' with the name of your CSS variable
 </script>
 
 <template>
-  <div class="bio">
+  <div class="bio" :style="{ backgroundColor: backgroundColor, color: textColor } ">
     <img src="@/assets/front.png" alt="Small Photo" class="small-photo" />
-    <div class="bio-content">
+    <div class="bio-content" >
       <h1>Hey, I'm Diego</h1>
       <p>I'm a DevOps engineer</p>
       <p>3 years of experience. Specialized in cloud based solutions</p>
       <div class="social-buttons">
-        <button v-for="social in props.socials" :key="social.name" @click="goToProfile(social.profileUrl)">
+        <button v-for="social in props.socials" :key="social.name" @click="goToProfile(social.profileUrl)" :style="{ background: secondaryColor, color:secondaryTextColor}">
           <img :src="social.imageUrl" :alt="social.name + ' Icon'" />
           {{ social.name }}
         </button>

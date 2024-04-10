@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="projects" :style="{backgroundColor:backgroundColor,color:textColor}">
     <h1>Projects</h1>
     <p>Here are some of the projects I've worked on:</p>
     <div class="project-container">
@@ -20,6 +20,11 @@ import ProjectBlock from './ProjectBlock.vue';
 import globalData from '../scripts/globalData.js';
 
 const projects = globalData.projects;
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-4');
+const secondaryColor = style.getPropertyValue('--scale-5');
+const textColor = style.getPropertyValue('--text-color-scale-4');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 </script>
 
 <style scoped>

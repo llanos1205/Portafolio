@@ -1,5 +1,5 @@
 <template>
-  <div class="jobs-container">
+  <div class="jobs-container" :style="{backgroundColor:backgroundColor}">
     <JobBlock
         v-for="(job, index) in jobs"
         :key="index"
@@ -22,8 +22,28 @@ export default {
   },
   props: {
     jobs: Array
+  },
+  computed: {
+    backgroundColor() {
+      return backgroundColor;
+    },
+    secondaryColor() {
+      return secondaryColor;
+    },
+    textColor() {
+      return textColor;
+    },
+    secondaryTextColor() {
+      return secondaryTextColor;
+    }
   }
 };
+const style = getComputedStyle(document.documentElement);
+const backgroundColor = style.getPropertyValue('--scale-3');
+const secondaryColor = style.getPropertyValue('--scale-4');
+const textColor = style.getPropertyValue('--text-color-scale-3');
+const secondaryTextColor = style.getPropertyValue('--text-color-scale-4');
+
 </script>
 
 <style scoped>
