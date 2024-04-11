@@ -38,6 +38,7 @@ export default {
   font-size: 36px;
   margin-bottom: 20px;
 }
+
 @media (max-width: 600px) {
   .construction {
     height: 100vh;

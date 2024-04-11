@@ -2,12 +2,12 @@
   <div id="app">
 
 
-    <Bio ref="bio" :socials="socials" />
-    <SkillGrid ref="skillGrid" :skills="skills" />
-    <Jobs ref="jobs" :jobs="jobs" />
-    <Projects ref="projects" />
-    <About ref="aboutMe" />
-    <UnderConstruction ref="underConstruction" />
+    <Bio ref="bio" :socials="socials"/>
+    <SkillGrid ref="skillGrid" :skills="skills"/>
+    <Jobs ref="jobs" :jobs="jobs"/>
+    <Projects ref="projects"/>
+    <About ref="aboutMe"/>
+    <UnderConstruction ref="underConstruction"/>
 
 
   </div>
@@ -22,6 +22,7 @@ import About from "@/components/About.vue";
 import Jobs from "@/components/Jobs.vue";
 import scrollIntoView from 'scroll-into-view';
 import globalData from '@/scripts/globalData.js';
+
 export default {
   name: 'App',
   components: {
@@ -34,7 +35,7 @@ export default {
   },
   data() {
     return {
-      components: [ 'bio', 'skillGrid','jobs', 'projects','aboutMe','underConstruction'],
+      components: ['bio', 'skillGrid', 'jobs', 'projects', 'aboutMe', 'underConstruction'],
       currentComponentIndex: 0,
       skills: globalData.skills,
       jobs: globalData.jobs,

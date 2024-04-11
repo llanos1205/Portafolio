@@ -1,16 +1,18 @@
 <template>
   <div class="job-block" @click="showAllTools = !showAllTools" :style="{backgroundColor:backgroundColor}">
     <div class="content">
-    <h2 class="title">{{ company }} - {{ role }}</h2>
-    <p class="duration">{{ startDate }} - {{ endDate }}</p>
-    <ul class="description" ref="description">
-      <li v-for="(point, index) in descriptionPoints" :key="index">
-        {{ point }}
-      </li>
-    </ul>
+      <h2 class="title">{{ company }} - {{ role }}</h2>
+      <p class="duration">{{ startDate }} - {{ endDate }}</p>
+      <ul class="description" ref="description">
+        <li v-for="(point, index) in descriptionPoints" :key="index">
+          {{ point }}
+        </li>
+      </ul>
     </div>
-    <ul class="tools"  :style="{backgroundColor:backgroundColor}">
-      <li v-for="(tool, index) in displayedTools" :key="index" class="tool" :style="{ backgroundColor:secondaryColor,color:textColor }">#{{ tool.name }}</li>
+    <ul class="tools" :style="{backgroundColor:backgroundColor}">
+      <li v-for="(tool, index) in displayedTools" :key="index" class="tool"
+          :style="{ backgroundColor:secondaryColor,color:textColor }">{{ tool.name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -65,11 +67,11 @@ export default {
       return secondaryTextColor;
     },
     displayedTools() {
-      if (this.showAllTools) {
-        return this.tools;
-      } else {
-        return this.tools.slice(0, 3);
+      let tools = [...this.tools]; // Create a copy of the tools array
+      if (!this.showAllTools && tools.length > 4) {
+        tools.splice(4, 0, { name: 'Click for more ...' }); // Inject "More..." at the fourth index
       }
+      return this.showAllTools ? tools : tools.slice(0, 5); // Slice the first 5 items if not showing all tools
     }
   }
 };
@@ -95,7 +97,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
-   margin: 10px;
+  margin: 10px;
   display: flex;
   position: relative;
 
@@ -113,24 +115,28 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 .job-block ul {
   padding: 20px; /* Space to the left of the list */
 }
+
 @media (max-width: 2000px) {
   .job-block {
     min-height: 40vh;
     min-width: 30vw;
   }
 }
+
 @media (max-width: 1200px) {
   .job-block {
     min-height: 70vh;
     min-width: 60vw;
   }
 }
+
 @media (max-width: 600px) {
   .job-block {
     min-height: 80vh;
     min-width: 90vw;
   }
 }
+
 .title {
   font-size: 1.5em; /* Larger font size */
   margin-bottom: 10px; /* Space below the title */
@@ -150,7 +156,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 .description li {
   display: block; /* Stack the li elements vertically */
   padding-bottom: 10px;
-  text-align:  justify;
+  text-align: justify;
   max-width: 100%; /* Limit the width of the li elements */
   word-wrap: break-word; /* Allow the text to wrap */
   overflow: hidden; /* Hide overflowing content */

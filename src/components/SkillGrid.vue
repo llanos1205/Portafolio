@@ -1,17 +1,18 @@
 <script>
 
 import SkillBlock from './SkillBlock.vue';
+
 export default {
   components: {
     SkillBlock
   },
-  props : {
+  props: {
     skills: {
       type: Array,
       required: true
     }
   },
-  computed:{
+  computed: {
     backgroundColor: () => {
       return backgroundColor;
     },
@@ -35,13 +36,14 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
 </script>
 
 <template>
-  <div class="container" :style="{background:backgroundColor, color:textColor}" >
+  <div class="container" :style="{background:backgroundColor, color:textColor}">
     <div class="title">
       <h1>Skills</h1>
       <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
     </div>
-    <div class="grid" >
-      <SkillBlock v-for="(skill, index) in $props.skills" :key="index" :name="skill.name" :icon-url="skill.iconUrl" :level="skill.level"  />
+    <div class="grid">
+      <SkillBlock v-for="(skill, index) in $props.skills" :key="index" :name="skill.name" :icon-url="skill.iconUrl"
+                  :level="skill.level"/>
     </div>
   </div>
 
@@ -51,15 +53,15 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
 .grid {
   display: grid;
   column-gap: 30px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  //sscrollbar-width: none;
-  grid-template-columns: repeat(8, minmax(100px, 1fr));
+  -ms-overflow-style: none; /* IE and Edge */
+//sscrollbar-width: none; grid-template-columns: repeat(8, minmax(100px, 1fr));
   overflow-x: auto;
   position: relative;
-  //mask-image: linear-gradient(to bottom, transparent 10%, black 25%, black 75%, transparent 90%);
+//mask-image: linear-gradient(to bottom, transparent 10%, black 25%, black 75%, transparent 90%);
 
 
 }
+
 .grid::-webkit-scrollbar {
   display: none;
 }
@@ -74,11 +76,13 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   bottom: 0;
   background: linear-gradient(to top, #144272, transparent);
 }
+
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, minmax(100px, 1fr));
   }
 }
+
 @media (max-width: 600px) {
   .grid {
     column-gap: 10px;
@@ -86,7 +90,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   }
 }
 
-.container{
+.container {
   width: 100vw;
   height: 50vh;
   background-color: #144272;
@@ -95,11 +99,13 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   align-items: center;
   flex-direction: column;
 }
+
 @media (max-width: 600px) {
   .container {
     height: 100vh; /* Height in smaller screens */
   }
 }
+
 .title {
   margin-bottom: 50px; /* Add some margin at the bottom */
   margin-top: 50px;

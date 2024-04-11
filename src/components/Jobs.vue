@@ -3,11 +3,9 @@
     <div class="title">
       <h1>Work Experience</h1>
       <p>Companies I had the opportunity to work with :</p>
-      <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
-
     </div>
     <div class="jobs-container" :style="{backgroundColor:backgroundColor}">
-      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500" >
+      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500">
         <Slide v-for="(job, index) in jobs" :key="index">
           <JobBlock
               :company="job.company"
@@ -21,7 +19,7 @@
         </Slide>
         <template #addons>
           <Navigation/>
-          <Pagination />
+          <Pagination/>
         </template>
       </Carousel>
     </div>
@@ -30,10 +28,11 @@
 </template>
 
 <script>
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import {Carousel, Navigation, Pagination, Slide} from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import JobBlock from './JobBlock.vue';
 import 'vue3-carousel/dist/carousel.css'
+
 export default {
   components: {
     JobBlock,
@@ -105,22 +104,26 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-4');
   text-align: center;
   padding: 10px;
 }
+
 .jobs {
   width: 100vw;
   height: 50vh;
   background-color: #0A2647;
 
 }
+
 @media (max-width: 1200px) {
   .jobs {
     height: 75vh;
   }
 }
+
 @media (max-width: 600px) {
   .jobs {
     height: 100vh;
   }
 }
+
 .jobs-container {
 
   align-items: center;

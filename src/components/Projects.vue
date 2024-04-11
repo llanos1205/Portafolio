@@ -6,21 +6,21 @@
       <p style=" bottom: 20px; font-size: 12px; text-align: center; width: 100%;">Click on them!</p>
     </div>
     <div class="project-container">
-      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500" >
+      <Carousel :items-to-show="2.5" :wrap-around="true" v-bind="settings" :breakpoints="breakpoints" :transition="500">
         <Slide v-for="(project, index) in projects" :key="index">
 
-      <ProjectBlock
-          :key="index"
-          :name="project.name"
-          :image="project.imageUrl"
-          :items="project.steps"
-          :description="project.description"
-          class="carousel__item"
-      />
+          <ProjectBlock
+              :key="index"
+              :name="project.name"
+              :image="project.imageUrl"
+              :items="project.steps"
+              :description="project.description"
+              class="carousel__item"
+          />
         </Slide>
         <template #addons>
-          <Navigation />
-          <Pagination />
+          <Navigation/>
+          <Pagination/>
         </template>
       </Carousel>
     </div>
@@ -30,11 +30,10 @@
 <script>
 import ProjectBlock from './ProjectBlock.vue';
 import globalData from '../scripts/globalData.js';
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import {Carousel, Navigation, Pagination, Slide} from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+
 const projects = globalData.projects;
-
-
 
 
 export default {
@@ -117,28 +116,33 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   background-color: #0A2647;
 
 }
+
 @media (max-width: 1200px) {
   .projects {
     height: 75vh;
   }
 }
+
 @media (max-width: 600px) {
   .projects {
     height: 100vh;
   }
 }
+
 .project-container {
   align-items: center;
   height: 60vh;
 
 
 }
+
 @media (max-width: 600px) {
   .project-container {
     height: 85vh;
     padding: 15px;
   }
 }
+
 .carousel__slide {
   padding: 5px;
 }

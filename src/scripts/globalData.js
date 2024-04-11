@@ -35,10 +35,13 @@ export default {
                 'Build pipelines in github actions for C# .Net core and react web applications and deploy in GCP with terraform and docker'
             ],
             tools: [
-                { name: 'Google Cloud', color: '#00FF00' },
-                { name: 'C#', color: '#CC2927' },
-                { name: 'GitHub Actions', color: '#FFFFFF' },
-                { name: 'Terraform', color: '#CC2927' }
+                {name: 'Google Cloud', color: '#00FF00'},
+                {name: 'C#', color: '#CC2927'},
+                {name: 'GitHub Actions', color: '#FFFFFF'},
+                {name: 'Terraform', color: '#CC2927'},
+                {name: 'Docker Swarm', color: '#CC2927'},
+                {name: 'React', color: '#CC2927'},
+                {name: 'Nginx', color: '#CC2927'}
             ]
         },
         {
@@ -51,23 +54,24 @@ export default {
                 "Key part in the migration from Azure DevOps to GitHub, in a way workflow is never interrupted, both new and old projects would have their repository creation and sync dynamically with Terraform.",
                 "Developed lambda functions as temporary fixes for critical services until the development team could generate a more robust solution."
             ],
-            //change tools to follow the same structure as the other job
-
             tools:
                 [
-                    { "name": "Python", "color": "#4EAA25" },
-                    { "name": "AWS", "color": "#FF9900" },
-                    { "name": "Kubernetes", "color": "#FFFFFF" },
-                    { "name": "Flux CD", "color": "#1A1918" },
-                    { "name": "Helm", "color": "#FFFFFF" },
-                    { "name": "Terraform", "color": "#CC2927" },
-                    { "name": "GitHub Actions", "color": "#FFFFFF" },
-                    { "name": "Azure DevOps", "color": "#FF0000" },
-                    { "name": "Nginx", "color": "#269539" },
-                    { "name": "IIS", "color": "#CC2927" },
-                    { "name": "Bash", "color": "#4EAA25" },
-                    { "name": "Powershell", "color": "#FF0000" },
-                    { "name": "Bitbucket CI", "color": "#FFA500" }
+                    {"name": "Python", "color": "#4EAA25"},
+                    {"name": "AWS", "color": "#FF9900"},
+                    {"name": "Lambda", "color": "#FF9900"},
+                    {"name": "Docker", "color": "#FFFFFF"},
+                    {"name": "Kubernetes", "color": "#FFFFFF"},
+                    {"name": "Flux CD", "color": "#1A1918"},
+                    {"name": "Helm", "color": "#FFFFFF"},
+                    {"name": "Terraform", "color": "#CC2927"},
+                    {"name": "GitHub Actions", "color": "#FFFFFF"},
+                    {"name": "Azure DevOps", "color": "#FF0000"},
+                    {"name": "Grafana", "color": "#269539"},
+                    {"name": "IIS", "color": "#CC2927"},
+                    {"name": "Bash", "color": "#4EAA25"},
+                    {"name": "Powershell", "color": "#FF0000"},
+                    {"name": "Bitbucket CI", "color": "#FFA500"},
+                    {"name": "RabbitMQ", "color": "#FFA500"}
                 ]
         },
         {
@@ -81,15 +85,18 @@ export default {
             ],
             tools:
                 [
-                    { "name": "C#", "color": "#CC2927" },
-                    { "name": "Azure", "color": "#FFFF00" },
-                    { "name": "Azure DevOps", "color": "#FFA500" },
-                    { "name": "Docker", "color": "#00FF00" },
-                    { "name": "Kubernetes", "color": "#FFFFFF" },
-                    { "name": "Azure Bicep", "color": "#00FFFF" },
-                    { "name": "Nginx", "color": "#269539" },
-                    { "name": "SQL Server", "color": "#CC2927" },
-                    { "name": "Powershell", "color": "#FFFFFF" }
+                    {"name": "C#", "color": "#CC2927"},
+                    {"name": "Flutter", "color": "#CC2927"},
+                    {"name": "Typescript", "color": "#CC2927"},
+                    {"name": "Azure", "color": "#FFFF00"},
+                    {"name": "Azure DevOps", "color": "#FFA500"},
+                    {"name": "Docker", "color": "#00FF00"},
+                    {"name": "Kubernetes", "color": "#FFFFFF"},
+                    {"name": "Azure Bicep", "color": "#00FFFF"},
+                    {"name": "Nginx", "color": "#269539"},
+                    {"name": "SQL Server", "color": "#CC2927"},
+                    {"name": "Bash", "color": "#4EAA25"},
+                    {"name": "Powershell", "color": "#FFFFFF"}
                 ]
 
         },
@@ -101,7 +108,7 @@ export default {
             descriptionPoints: [
                 'Developed Internal inventory management system with Python and Django',
             ],
-            tools: [ { "name": "Python", "color": "#4EAA25" }]
+            tools: [{"name": "Python", "color": "#4EAA25"}, {"name": "Django", "color": "#4EAA25"}]
         },
     ],
     skills: [
@@ -231,7 +238,7 @@ export default {
             name: 'Migration from on-premise to cloud',
             description: 'Had the opportunity to migrate a company from on-premise infrastructure mostly based on IIS hosted services into a cloud based infrastructure with a hybrid Kubernetes cluster',
             imageUrl: "https://cdn.simpleicons.org/kubernetes/white",
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/linux/white',
                     description: 'Initial On premise infrastructure'
@@ -269,7 +276,7 @@ export default {
             name: 'Kubernetes introduction to FluxCD',
             description: 'Brought GitOps to the company with FluxCD and Helm allowing pull based deployments and versioned cluster configurations across environments. Now complete environments can be replicated in matter of seconds',
             imageUrl: "https://cdn.simpleicons.org/flux/white",
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/git/white',
                     description: 'Created a centralized repository for all the cluster configurations'
@@ -300,7 +307,7 @@ export default {
             name: 'CI/CD of different services',
             description: 'Deployed different types of services with different CI/CD tools, such as Jenkins, GitHub Actions, Azure DevOps, Bitbucket CI',
             imageUrl: "https://cdn.simpleicons.org/githubactions/white",
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/csharp/white',
                     description: 'API ,QueueConsumer & Web applications'
@@ -331,7 +338,7 @@ export default {
             name: 'Serverless functions',
             description: 'Using lambda functions to solve critical issues, not letting the scripting skills go to waste',
             imageUrl: 'https://cdn.simpleicons.org/awslambda/white',
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/python/white',
                     description: 'Python and C# based lambda functions'
@@ -351,7 +358,7 @@ export default {
             name: 'Portfolio',
             description: 'My personal portfolio, although front end is not my strong suit, I wanted to have a place to showcase my work and skills',
             imageUrl: 'https://cdn.simpleicons.org/vuedotjs/white',
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/vuedotjs/white',
                     description: 'Create a Vue App'
@@ -375,7 +382,7 @@ export default {
             name: 'Storage solutions',
             description: 'The backend developer in a project to create a storage solution for a company, here I had to create both the backend and the infrastructure. I hope is still running ! https://cloud.sourceinfinity.co',
             imageUrl: 'https://cdn.simpleicons.org/csharp/white',
-            steps:[
+            steps: [
                 {
                     iconUrl: 'https://cdn.simpleicons.org/github/white',
                     description: 'Create a GitHub Repository'
@@ -406,5 +413,5 @@ export default {
             ]
 
         }
-        ]
+    ]
 };

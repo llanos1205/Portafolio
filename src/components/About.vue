@@ -2,14 +2,16 @@
   <div class="about">
     <div class="text-body">
       <h2>About Me</h2>
-      <div >
+      <div>
         <p>
-          My name is Diego Alejandro Llanos Gareca, I am a DevOps engineer , I have 3 years of experience in the field. I specialize in cloud-based solutions.
+          My name is Diego Alejandro Llanos Gareca, I am a DevOps engineer , I have 3 years of experience in the field.
+          I specialize in cloud-based solutions.
 
         </p>
 
         <p>
-          I am an  enthusiast of kubernetes and git-ops, I am always looking for new challenges and learning new technologies. Love automating processes, if you can do it manually you can automate it.
+          I am an enthusiast of kubernetes and git-ops, I am always looking for new challenges and learning new
+          technologies. Love automating processes, if you can do it manually you can automate it.
         </p>
         <p>
           I like "Milanesa a la napolitana"
@@ -19,7 +21,7 @@
     </div>
     <div class="photo">
       <!-- Replace 'photo-url.jpg' with the actual URL of your photo -->
-      <img src="@/assets/side.png" alt="Your Photo" class="photo-img" />
+      <img src="@/assets/side.png" alt="Your Photo" class="photo-img"/>
     </div>
   </div>
 </template>
@@ -46,6 +48,7 @@ const title = "About Me";
     flex-direction: column; /* Stack items vertically in smaller screens */
   }
 }
+
 .text-body {
   flex: 1;
   padding: 20px;
@@ -64,6 +67,7 @@ const title = "About Me";
   height: 400px; /* Adjust size as needed */
   object-fit: cover; /* Ensures the photo covers the entire circle */
 }
+
 @media (max-width: 600px) {
   .photo-img {
     width: 250px;

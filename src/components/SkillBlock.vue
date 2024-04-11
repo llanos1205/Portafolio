@@ -2,9 +2,10 @@
   <div class="skill-block" @mouseover="toggleRectangle" @mouseleave="hideRectangle">
     <div class="square-wrapper">
       <div class="square" :style="{background:backgroundColor}">
-        <img :src="iconUrl" alt="Icon" class="icon" />
+        <img :src="iconUrl" alt="Icon" class="icon"/>
       </div>
-      <div v-if="showRectangle" class="rectangle" :style="{ width: rectangleWidth, height: rectangleHeight, top: rectangleTop }">
+      <div v-if="showRectangle" class="rectangle"
+           :style="{ width: rectangleWidth, height: rectangleHeight, top: rectangleTop }">
         <div class="fill" :style="{ width: fillPercentage, backgroundColor: fillColor }"></div>
       </div>
     </div>
@@ -54,17 +55,17 @@ export default {
     }
   },
   methods: {
-      toggleRectangle() {
-        this.showRectangle = true;
-        this.rectangleWidth = "100%";
-        this.setFillColor();
-      },
-      hideRectangle() {
-        this.showRectangle = false;
-        this.rectangleWidth = "0%";
-        this.fillPercentage = "0%";
-        this.fillColor = "transparent";
-      },
+    toggleRectangle() {
+      this.showRectangle = true;
+      this.rectangleWidth = "100%";
+      this.setFillColor();
+    },
+    hideRectangle() {
+      this.showRectangle = false;
+      this.rectangleWidth = "0%";
+      this.fillPercentage = "0%";
+      this.fillColor = "transparent";
+    },
     setFillColor() {
       if (this.level >= 0.75) {
         this.fillColor = "green";
@@ -92,12 +93,14 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-4');
   display: inline-block;
   cursor: pointer;
 }
+
 @media (max-width: 600px) {
   .skill-block {
     flex-direction: column;
     align-items: center;
   }
 }
+
 .square-wrapper {
   position: relative;
   width: 100px;

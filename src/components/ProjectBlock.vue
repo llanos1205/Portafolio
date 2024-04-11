@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible" :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:secondaryTextColor }">
+    <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible"
+         :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:secondaryTextColor }">
       <h2>{{ name }}</h2>
       <img :src="image" alt="Image">
       <p>{{ description }}</p>
     </div>
-    <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible" :style="{ backgroundColor:backgroundColor,color:secondaryTextColor }">
+    <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible"
+         :style="{ backgroundColor:backgroundColor,color:secondaryTextColor }">
       <div class="rectangle-card" v-for="(item, index) in items" :key="index" :style="{ fontSize: fontSize + 'px' }">
-      <img :src="item.iconUrl" alt="Icon">
+        <img :src="item.iconUrl" alt="Icon">
         <p>{{ item.description }}</p>
       </div>
     </div>
@@ -92,18 +94,21 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
 }
+
 @media (max-width: 2000px) {
-  .card{
+  .card {
     min-height: 40vh;
     min-width: 30vw;
   }
 }
+
 @media (max-width: 1200px) {
   .card {
     min-height: 70vh;
     min-width: 60vw;
   }
 }
+
 @media (max-width: 600px) {
   .card {
     min-height: 80vh;
@@ -144,6 +149,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   height: 50px;
   margin: 15px;
 }
+
 .rectangle-card p {
   padding: 10px;
   margin-right: 10px;
