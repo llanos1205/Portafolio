@@ -68,7 +68,7 @@ export default {
       },
       // 700px and up
       1400: {
-        itemsToShow: 1,
+        itemsToShow: 2,
         snapAlign: 'center',
       },
       2000: {

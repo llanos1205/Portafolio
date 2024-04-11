@@ -297,6 +297,37 @@ export default {
             ]
         },
         {
+            name: 'CI/CD of different services',
+            description: 'Deployed different types of services with different CI/CD tools, such as Jenkins, GitHub Actions, Azure DevOps, Bitbucket CI',
+            imageUrl: "https://cdn.simpleicons.org/githubactions/white",
+            steps:[
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/csharp/white',
+                    description: 'API ,QueueConsumer & Web applications'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/flux/white',
+                    description: 'Static web applications'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/flutter/white',
+                    description: 'Mobile applications based on Android and iOS'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/kubernetes/white',
+                    description: 'Docker containers with swarm , kubernetes templates and helm'
+                }
+                ,
+                {
+                    iconUrl: 'https://cdn.simpleicons.org/awslambda/white',
+                    description: 'Serverless functions with AWS Lambda and Azure Functions'
+                }
+            ]
+        },
+        {
             name: 'Serverless functions',
             description: 'Using lambda functions to solve critical issues, not letting the scripting skills go to waste',
             imageUrl: 'https://cdn.simpleicons.org/awslambda/white',
