@@ -5,6 +5,9 @@
       <h2>{{ name }}</h2>
       <img :src="image" alt="Image">
       <p>{{ description }}</p>
+      <div class="arrow-container">
+        <img src="@/assets/arrow-next.svg" alt="More" class="moreArrow">
+      </div>
     </div>
     <div class="card card-steps" v-else @click="isCard1Visible = !isCard1Visible"
          :style="{ backgroundColor:backgroundColor,color:secondaryTextColor }">
@@ -81,6 +84,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 
 
 .card {
+  position: relative;
   width: 300px;
   height: 300px;
   min-width: 30vw; /* Adjust size as needed */
@@ -125,7 +129,8 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 .card-description {
   background-color: #4a4a4a; /* Darker background color for card 1 */
   word-wrap: break-word;
-  overflow-x: hidden;
+
+
 }
 
 .card-steps {
@@ -156,5 +161,18 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   text-align: justify;
   word-wrap: break-word;
   overflow-x: hidden;
+}
+.moreArrow {
+
+  max-width: 70px;
+  max-height: 70px;
+
+}
+.arrow-container {
+  margin-right: 20px;
+  text-align: right;
+  position: absolute; /* Make the arrow-container an absolute container */
+  bottom: 0; /* Position the arrow-container at the bottom */
+  right: 0;
 }
 </style>

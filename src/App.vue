@@ -40,7 +40,7 @@ export default {
       skills: globalData.skills,
       jobs: globalData.jobs,
       socials: globalData.socials,
-      customScrollingEnabled: true // Add this line
+      customScrollingEnabled: false // Add this line
     };
   },
   methods: {
