@@ -69,7 +69,7 @@ export default {
           snapAlign: 'start',
         },
         // 700px and up
-        1024: {
+        1400: {
           itemsToShow: 2,
           snapAlign: 'center',
         },

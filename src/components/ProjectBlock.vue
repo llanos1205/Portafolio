@@ -135,7 +135,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   border-radius: 10px;
   margin-bottom: 10px;
   background-color: #4a4a4a;
-  min-height: 10vh;
+  min-height: 15vh;
   height: calc((300px - 20px * 2) / 4); /* Adjust the height based on the number of items you want to display before scrolling */
 }
 
