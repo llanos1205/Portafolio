@@ -54,7 +54,15 @@ export default {
     // breakpoints are mobile first
     // any settings not specified will fallback to the carousel settings
     breakpoints: {
+      100: {
+        itemsToShow: 1,
+        snapAlign: 'start',
+      },
       400: {
+        itemsToShow: 1,
+        snapAlign: 'start',
+      },
+      800: {
         itemsToShow: 1,
         snapAlign: 'start',
       },
