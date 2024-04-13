@@ -3,7 +3,7 @@
     <div class="card card-description" v-if="isCard1Visible" @click="isCard1Visible = !isCard1Visible"
          :style="{ fontSize: fontSize + 'px',backgroundColor:backgroundColor,color:secondaryTextColor }">
       <h2>{{ name }}</h2>
-      <img :src="image" alt="Image">
+      <img :src="image" alt="Image" class="card-image">
       <p>{{ description }}</p>
       <div class="arrow-container">
         <img src="@/assets/arrow-next.svg" alt="More" class="moreArrow">
@@ -99,6 +99,25 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
   -ms-user-select: none;
 }
 
+.card-description .card-image {
+  height: 50%; /* Full width on large screens */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+@media (max-width: 1200px) {
+  .card-description .card-image {
+    height: 40%; /* Full width on large screens */
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-description .card-image {
+    height: 30%; /* Full width on large screens */
+    width: auto;
+  }
+}
 @media (max-width: 2000px) {
   .card {
     min-height: 40vh;
@@ -164,12 +183,17 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
 }
 .moreArrow {
 
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 60px;
+  max-height: 60px;
 
 }
 .arrow-container {
+  border: 2px solid white;
   margin-right: 20px;
+  margin-bottom: 20px;
+  width: 65px; /* Set a fixed width */
+  height: 65px;
+  border-radius: 10%;
   text-align: right;
   position: absolute; /* Make the arrow-container an absolute container */
   bottom: 0; /* Position the arrow-container at the bottom */
