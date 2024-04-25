@@ -59,6 +59,13 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
   }
 }
 
+@media (max-height: 1200px ) {
+  .bio {
+    height: 100vh;
+    flex-direction: row;
+  }
+}
+
 .small-photo {
   border-radius: 50%; /* Creates circular border */
   width: 400px; /* Adjust size as needed */
@@ -72,6 +79,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
     height: 250px;
   }
 }
+
 .social-buttons {
   column-gap: 5px;
   display: flex;

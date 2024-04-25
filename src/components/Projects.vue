@@ -115,12 +115,13 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
   background-color: #0A2647;
 
 }
-
-@media (max-width: 1200px) {
+@media (max-height: 1200px ) {
   .projects {
-    height: 75vh;
+    height: 100vh;
+    flex-direction: row;
   }
 }
+
 
 @media (max-width: 600px) {
   .projects {

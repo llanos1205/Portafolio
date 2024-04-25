@@ -138,7 +138,11 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-6');
     min-width: 90vw;
   }
 }
-
+@media (max-height: 1200px) {
+  .card {
+    height: 80vh; /* Height in smaller screens */
+  }
+}
 .card img {
   width: 300px;
   height: 300px;

@@ -136,6 +136,11 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
     min-width: 90vw;
   }
 }
+@media (max-height: 1200px) {
+  .job-block {
+    height: 80vh; /* Height in smaller screens */
+  }
+}
 
 .title {
   font-size: 1.5em; /* Larger font size */

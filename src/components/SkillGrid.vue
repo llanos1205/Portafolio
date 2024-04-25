@@ -105,6 +105,11 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
     height: 100vh; /* Height in smaller screens */
   }
 }
+@media (max-height: 1200px) {
+  .container {
+    height: 100vh; /* Height in smaller screens */
+  }
+}
 
 .title {
   margin-bottom: 50px; /* Add some margin at the bottom */

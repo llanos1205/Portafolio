@@ -48,6 +48,12 @@ const title = "About Me";
     flex-direction: column; /* Stack items vertically in smaller screens */
   }
 }
+@media (max-height: 1200px ) {
+  .about {
+    height: 100vh;
+    flex-direction: row;
+  }
+}
 
 .text-body {
   flex: 1;
