@@ -59,7 +59,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
   }
 }
 
-@media (max-height: 1200px ) {
+@media (min-height: 1200px ) {
   .bio {
     height: 100vh;
     flex-direction: row;

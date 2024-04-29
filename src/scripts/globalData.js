@@ -158,6 +158,11 @@ export default {
             level: 0.8
         },
         {
+            name: "Ansible",
+            iconUrl: "https://cdn.simpleicons.org/ansible/white",
+            level: 0.4
+        },
+        {
             name: "Azure Bicep",
             iconUrl: "https://cdn.simpleicons.org/microsoftazure/white",
             level: 0.6
