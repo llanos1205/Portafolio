@@ -21,6 +21,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
       <h1>Hey, I'm Diego</h1>
       <p>I'm a DevOps engineer</p>
       <p>3 years of experience. Specialized in cloud based solutions</p>
+      <p>NZ Work visa status: <span class="visa-status">In Process, expected JUN 2024</span></p>
       <div class="social-buttons">
         <button v-for="social in props.socials" :key="social.name" @click="goToProfile(social.profileUrl)" :style="{ background: secondaryColor, color:secondaryTextColor}">
           <img :src="social.imageUrl" :alt="social.name + ' Icon'" />
@@ -32,7 +33,9 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
 </template>
 
 <style scoped>
-
+.visa-status {
+  color: yellow;
+}
 .bio {
   width: 100vw;
   height: 50vh;
