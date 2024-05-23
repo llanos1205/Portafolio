@@ -1,4 +1,5 @@
 <script setup>
+import {computed} from "vue";
 const props = defineProps({
   socials: Array
 });
@@ -12,6 +13,22 @@ const secondaryColor = style.getPropertyValue('--scale-2');
 const textColor = style.getPropertyValue('--text-color-scale-1');
 const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
 // Replace '--scale-4' with the name of your CSS variable
+const visaStatus = computed(() => {
+  const currentDate = new Date();
+  const visaDate = new Date(2024, 5, 5); // June 5, 2024
+
+  if (currentDate < visaDate) {
+    return {
+      text: 'In Process, expected JUN 2024',
+      color: 'yellow',
+    };
+  } else {
+    return {
+      text: 'Available',
+      color: 'green',
+    };
+  }
+});
 </script>
 
 <template>
@@ -21,7 +38,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
       <h1>Hey, I'm Diego</h1>
       <p>I'm a DevOps engineer</p>
       <p>3 years of experience. Specialized in cloud based solutions</p>
-      <p>NZ Work visa status: <span class="visa-status">In Process, expected JUN 2024</span></p>
+      <p>NZ Work visa status: <span :class="visaStatus.color">{{ visaStatus.text }}</span></p>
       <div class="social-buttons">
         <button v-for="social in props.socials" :key="social.name" @click="goToProfile(social.profileUrl)" :style="{ background: secondaryColor, color:secondaryTextColor}">
           <img :src="social.imageUrl" :alt="social.name + ' Icon'" />
@@ -33,8 +50,11 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
 </template>
 
 <style scoped>
-.visa-status {
+.yellow {
   color: yellow;
+}
+.green {
+  color: green;
 }
 .bio {
   width: 100vw;
