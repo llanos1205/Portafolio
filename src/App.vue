@@ -6,6 +6,7 @@
     <SkillGrid ref="skillGrid" :skills="skills"/>
     <Jobs ref="jobs" :jobs="jobs"/>
     <Projects ref="projects"/>
+    <Certificates ref="certificates" :certificates="certificates"/>
     <About ref="aboutMe"/>
     <UnderConstruction ref="underConstruction"/>
 
@@ -19,6 +20,7 @@ import SkillGrid from "@/components/SkillGrid.vue";
 import Bio from "@/components/Bio.vue";
 import Projects from "@/components/Projects.vue";
 import About from "@/components/About.vue";
+import Certificates from "@/components/Certificates.vue";
 import Jobs from "@/components/Jobs.vue";
 import scrollIntoView from 'scroll-into-view';
 import globalData from '@/scripts/globalData.js';
@@ -31,12 +33,14 @@ export default {
     Bio,
     Projects,
     About,
+    Certificates,
     Jobs
   },
   data() {
     return {
-      components: ['bio', 'skillGrid', 'jobs', 'projects', 'aboutMe', 'underConstruction'],
+      components: ['bio', 'skillGrid', 'jobs', 'projects','certificates', 'aboutMe', 'underConstruction'],
       currentComponentIndex: 0,
+      certificates: globalData.certificates,
       skills: globalData.skills,
       jobs: globalData.jobs,
       socials: globalData.socials,

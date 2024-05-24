@@ -35,24 +35,9 @@ export default {
       fontSize: 16 // Initial font size
     };
   },
-  methods: {
-    // adjustFontSize() {
-    //   const description = this.$refs.description;
-    //   const rectangleCard = this.$refs.rectangleCard;
-    //   const containerHeight = Math.min(description.clientHeight, rectangleCard.clientHeight);
-    //   const lineHeight = parseFloat(window.getComputedStyle(description.firstElementChild).lineHeight);
-    //   const lines = Math.floor(containerHeight / lineHeight);
-    //   const totalLines = Math.max(description.children.length, rectangleCard.children.length);
-    //   if (lines < totalLines) {
-    //     this.fontSize = (containerHeight / totalLines) * 0.9; // Adjust font size to fit all lines
-    //   }
-    // }
-  },
+
 
   mounted() {
-
-    // this.adjustFontSize();
-    // window.addEventListener('resize', this.adjustFontSize);
 
   },
   computed: {

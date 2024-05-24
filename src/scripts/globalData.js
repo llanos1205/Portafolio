@@ -418,5 +418,71 @@ export default {
             ]
 
         }
-    ]
+    ],
+    certificates: [
+        {
+            name: 'AWS Certified DevOps Engineer – Professional',
+            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            issueDate: 'May 2021',
+            expirationDate: 'Jul 2024',
+            credentialId: 'TJ394C3BD2REQ153',
+            redirectLink: 'https://www.credly.com/badges/abb4907c-1cac-41fa-92d7-db79c1f1679a?source=linked_in_profile'
+        },
+        {
+            name: 'AWS Certified Solutions Architect - Associate',
+            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            issueDate: 'Mar 2020',
+            expirationDate: 'Dec 2024',
+            credentialId: 'QD1HWLMC3B1Q15SL',
+            redirectLink: 'https://www.credly.com/badges/27f79e44-47b5-4a70-9b13-b46a93c3ed7b/public_url'
+        },
+        {
+            name: 'AWS Certified SysOps Administrator – Associate',
+            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            issueDate: 'Aug 2020',
+            expirationDate: 'Jul 2024',
+            credentialId: 'LXCN9552HJEE1WG4',
+            redirectLink: 'https://www.credly.com/badges/d21fa0e9-938c-4969-9c4a-b243e074e206/linked_in_profile'
+        },
+        {
+            name: 'AWS Certified Developer – Associate',
+            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            issueDate: 'Jun 2020',
+            expirationDate: 'Mar 2024',
+            credentialId: 'SC0FFCM2P2QQQDG7',
+            redirectLink: 'https://www.credly.com/badges/4975b86f-8dfc-4366-8c67-3e397caeb14f/linked_in_profile'
+        },
+        {
+            name: 'CKA: Certified Kubernetes Administrator',
+            iconLink: 'https://cdn.simpleicons.org/kubernetes/white',
+            issueDate: 'Feb 2022',
+            expirationDate: 'Nov 2024',
+            credentialId: 'LF-q013gc0oop',
+            redirectLink: 'https://www.credly.com/badges/389dc959-3ba5-4d76-8d44-445175cac999?source=linked_in_profile'
+        },
+        {
+            name: 'Microsoft Certified: Azure Administrator Associate',
+            iconLink: 'https://cdn.simpleicons.org/microsoftazure/white',
+            issueDate: 'Jul 2021',
+            expirationDate: 'Jun 2024',
+            credentialId: 'H903-3273',
+            redirectLink: 'https://www.credly.com/badges/a6bf0194-70b0-4929-897a-868f1179ac6a?source=linked_in_profile'
+        },
+        {
+            name: 'TOEFL',
+            iconLink: 'https://cdn.simpleicons.org/microsoftazure/white',
+            issueDate: 'Jan 2021',
+            expirationDate: 'Jun 2024',
+            credentialId: '7431001213902589',
+            redirectLink: ''
+        },
+        {
+            name: 'IELTS',
+            iconLink: 'https://cdn.simpleicons.org/microsoftazure/white',
+            issueDate: 'Dec 2021',
+            expirationDate: 'Jun 2024',
+            credentialId: '21AR001432LLAD630G',
+            redirectLink: ''
+        }
+    ],
 };
