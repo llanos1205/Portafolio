@@ -1,10 +1,10 @@
 <template>
   <div class="construction">
     <h1>This site is Under Construction</h1>
-    <p>Hello! nice to see you reached the bottom of this portfolio</p>
-    <p>As you may see this page isn't the most glamorous display of UI and UX skills</p>
-    <p>And that's because I am not a FrontEnd Engineer or a UI/UX designer, this is an art that goes beyond me</p>
-    <p>This site will continue to be in progress as I learn more Vue on my free time</p>
+    <p>Hello! Glad to see you made it to the bottom of this portfolio.</p>
+    <p>You may have noticed that this page isn't a showcase of cutting-edge UI and UX design. That's because I'm not a FrontEnd Engineer or a UI/UX designer—those are skills that go beyond my expertise.</p>
+    <p>However, I hope this site highlights the key aspects of my journey as a DevOps engineer. It's a work in progress as I continue learning Vue in my spare time.</p>
+    <p>Thank you for visiting!</p>
   </div>
 </template>
 
