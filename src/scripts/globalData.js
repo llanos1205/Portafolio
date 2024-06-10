@@ -422,7 +422,7 @@ export default {
     certificates: [
         {
             name: 'AWS Certified DevOps Engineer – Professional',
-            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            iconLink: 'https://cdn.simpleicons.org/amazonwebservices/white',
             issueDate: 'May 2021',
             expirationDate: 'Jul 2024',
             credentialId: 'TJ394C3BD2REQ153',
@@ -430,7 +430,7 @@ export default {
         },
         {
             name: 'AWS Certified Solutions Architect - Associate',
-            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            iconLink: 'https://cdn.simpleicons.org/amazonwebservices/white',
             issueDate: 'Mar 2020',
             expirationDate: 'Dec 2024',
             credentialId: 'QD1HWLMC3B1Q15SL',
@@ -438,7 +438,7 @@ export default {
         },
         {
             name: 'AWS Certified SysOps Administrator – Associate',
-            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            iconLink: 'https://cdn.simpleicons.org/amazonwebservices/white',
             issueDate: 'Aug 2020',
             expirationDate: 'Jul 2024',
             credentialId: 'LXCN9552HJEE1WG4',
@@ -446,7 +446,7 @@ export default {
         },
         {
             name: 'AWS Certified Developer – Associate',
-            iconLink: 'https://cdn.simpleicons.org/amazonaws/white',
+            iconLink: 'https://cdn.simpleicons.org/amazonwebservices/white',
             issueDate: 'Jun 2020',
             expirationDate: 'Mar 2024',
             credentialId: 'SC0FFCM2P2QQQDG7',
