@@ -26,6 +26,7 @@ export default {
   background-size: cover; /* Cover the entire area of the element */
   background-position: center; /* Center the image */
   /* ...existing styles... */
+  color: #000000;
 }
 
 .construction p {
