@@ -114,7 +114,7 @@ export default {
     skills: [
         {
             name: "AWS",
-            iconUrl: "https://cdn.simpleicons.org/amazonaws/white",
+            iconUrl: "https://cdn.simpleicons.org/amazonwebservices/white",
             level: 1.0
         },
         {

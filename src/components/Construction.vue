@@ -22,7 +22,7 @@ export default {
   flex-direction: column;
   width: 100vw; /* 100% of the window's width */
   height: 100vh; /* 80% of the window's height */
-  background-image: url('https://media.licdn.com/dms/image/C4D16AQFyK66HIHTCYw/profile-displaybackgroundimage-shrink_350_1400/0/1628807504867?e=1717632000&v=beta&t=EpBc8-Qiqwgog-VMS4SCf8Iv5mmw3ziYguCxgh46W1c');
+  background-image: url('@/assets/cloud.jpg');
   background-size: cover; /* Cover the entire area of the element */
   background-position: center; /* Center the image */
   /* ...existing styles... */
