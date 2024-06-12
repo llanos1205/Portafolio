@@ -26,7 +26,7 @@ export default {
         ,
         {
             imageUrl: 'https://cdn.simpleicons.org/readdotcv/white',
-            name: 'CV Download',
+            name: 'CV',
             profileUrl: 'https://drive.google.com/file/d/1gY18M_rcYZy0aDyw76azoRYo0Q1pp9bM/view?usp=sharing'
         }
     ],
