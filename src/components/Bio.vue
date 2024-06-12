@@ -109,7 +109,7 @@ const visaStatus = computed(() => {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 400px; /* Adjust size as needed */
+  width: 350px; /* Adjust size as needed */
 }
 
 .social-buttons button {
