@@ -1,29 +1,20 @@
-# portafolio
+# Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a web portafolio that holds data of my cv, feel free to use it aa a template I dont mind
 
-## Recommended IDE Setup
+## Tech
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- vue3 (tha page itself)
+- github actions (automation for deployment to github pages)
+- aws route 53 (custom dns resolution)
 
-## Customize configuration
+## Production 
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+You can find this page running at 
 
-## Project Setup
+https://www.llanoscorp.com
 
-```sh
-npm install
-```
+## Disclaimer 
 
-### Compile and Hot-Reload for Development
+I AM NOT a frontend engineer nor a designer, so the quality in design, animation, color palette is below minimal, the main focus is the skills mentioned in the page as a DevOps engineer.
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
