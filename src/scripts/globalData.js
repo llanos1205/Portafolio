@@ -23,6 +23,12 @@ export default {
             name: 'Facebook',
             profileUrl: 'https://www.facebook.com/diego.llanosgareca'
         }
+        ,
+        {
+            imageUrl: 'https://cdn.simpleicons.org/markdown/white',
+            name: 'CV',
+            profileUrl: 'https://drive.google.com/file/d/1gY18M_rcYZy0aDyw76azoRYo0Q1pp9bM/view?usp=sharing'
+        }
     ],
     jobs: [
         {
