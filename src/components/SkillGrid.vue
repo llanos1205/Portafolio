@@ -54,11 +54,8 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   display: grid;
   column-gap: 30px;
   -ms-overflow-style: none; /* IE and Edge */
-//sscrollbar-width: none; grid-template-columns: repeat(8, minmax(100px, 1fr));
   overflow-x: auto;
   position: relative;
-//mask-image: linear-gradient(to bottom, transparent 10%, black 25%, black 75%, transparent 90%);
-
 
 }
 
@@ -102,7 +99,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
 
 @media (max-width: 600px) {
   .container {
-    height: 100vh; /* Height in smaller screens */
+    height: 160vh; /* Height in smaller screens */
   }
 }
 @media (max-height: 1200px) {
