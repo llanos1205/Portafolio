@@ -56,6 +56,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   -ms-overflow-style: none; /* IE and Edge */
   overflow-x: auto;
   position: relative;
+  grid-template-columns: repeat(6, minmax(100px, 1fr)); 
 
 }
 
@@ -89,7 +90,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
 
 .container {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   background-color: #144272;
   display: flex;
   justify-content: flex-start;
@@ -97,16 +98,12 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   flex-direction: column;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .container {
-    height: 160vh; /* Height in smaller screens */
-  }
+    height: calc(200vh);
+    }
 }
-@media (max-height: 1200px) {
-  .container {
-    height: 100vh; /* Height in smaller screens */
-  }
-}
+
 
 .title {
   margin-bottom: 50px; /* Add some margin at the bottom */
