@@ -98,7 +98,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-3');
   flex-direction: column;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .container {
     height: calc(200vh);
     }
