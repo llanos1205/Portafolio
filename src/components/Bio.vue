@@ -15,7 +15,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
 // Replace '--scale-4' with the name of your CSS variable
 const visaStatus = computed(() => {
   const currentDate = new Date();
-  const visaDate = new Date(2024, 23,06); // June 5, 2024
+  const visaDate = new Date(2024, 23,6); // June 5, 2024
 
   if (currentDate < visaDate) {
     return {
