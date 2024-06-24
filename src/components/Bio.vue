@@ -19,8 +19,8 @@ const visaStatus = computed(() => {
 
   if (currentDate < visaDate) {
     return {
-      text: 'In Process, expected JUN 2024',
-      color: 'yellow',
+      text: 'Available',
+      color: 'green',
     };
   } else {
     return {
