@@ -3,6 +3,7 @@
     <div class="content">
       <h2 class="title">{{ company }} - {{ role }}</h2>
       <p class="duration">{{ startDate }} - {{ endDate }}</p>
+      <p class="location">{{ location }}</p>
       <ul class="description" ref="description">
         <li v-for="(point, index) in descriptionPoints" :key="index">
           {{ point }}
@@ -25,6 +26,7 @@ export default {
     role: String,
     startDate: String,
     endDate: String,
+    location: String,
     descriptionPoints: Array,
     tools: Array
   },
@@ -148,6 +150,10 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-5');
 }
 
 .duration {
+  font-size: 1.2em; /* Slightly larger font size */
+  margin-bottom: 20px; /* Space below the duratioSn */
+}
+.location {
   font-size: 1.2em; /* Slightly larger font size */
   margin-bottom: 20px; /* Space below the duration */
 }

@@ -15,7 +15,7 @@ const secondaryTextColor = style.getPropertyValue('--text-color-scale-2');
 // Replace '--scale-4' with the name of your CSS variable
 const visaStatus = computed(() => {
   const currentDate = new Date();
-  const visaDate = new Date(2024, 23,6); // June 5, 2024
+  const visaDate = new Date(2024, 6,23);
 
   if (currentDate < visaDate) {
     return {
@@ -38,7 +38,8 @@ const visaStatus = computed(() => {
       <h1>Hey, I'm Diego</h1>
       <p>I'm a DevOps engineer</p>
       <p>3 years of experience. Specialized in cloud based solutions</p>
-      <p>NZ Work visa status: <span :class="visaStatus.color">{{ visaStatus.text }}</span></p>
+      <p>NZ Work visa status: <span>{{ visaStatus.text }}</span></p>
+      <p>Employment status: <span>Currently Employed</span></p>
       <div class="social-buttons">
         <button v-for="social in props.socials" :key="social.name" @click="goToProfile(social.profileUrl)" :style="{ background: secondaryColor, color:secondaryTextColor}">
           <img :src="social.imageUrl" :alt="social.name + ' Icon'" />

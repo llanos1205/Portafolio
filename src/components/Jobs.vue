@@ -10,6 +10,7 @@
           <JobBlock
               :company="job.company"
               :role="job.role"
+              :location="job.location"
               :startDate="job.startDate"
               :endDate="job.endDate"
               :descriptionPoints="job.descriptionPoints"

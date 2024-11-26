@@ -32,8 +32,29 @@ export default {
     ],
     jobs: [
         {
+            company: 'AWS',
+            role: 'Cloud Support Engineer',
+            location: 'New Zealand',
+            startDate: 'Sep 2024',
+            endDate: 'Present',
+            descriptionPoints: [
+                'Troubleshoot and resolve issues related to AWS services',
+            ],
+            tools: [
+                {name: 'AWS ECS', color: '#FF9900'},
+                {name: 'Docker', color: '#FFFFFF'},
+                {name: 'Kubernetes', color: '#FFFFFF'},
+                {name: 'Prometheus', color: '#269539'},
+                {name: 'AWS CLI', color: '#CC2927'},
+                {name: 'AWS Cloud Formation', color: '#4EAA25'},
+                {name: 'AWS EKS', color: '#FF0000'},
+                {name: 'AWS Batch', color: '#FFA500'},
+            ]
+        },
+        {
             company: 'Source Infinity',
             role: 'Intern',
+            location: 'New Zealand',
             startDate: 'Sep 2023',
             endDate: 'April 2024',
             descriptionPoints: [
@@ -53,6 +74,7 @@ export default {
         {
             company: 'Encora',
             role: 'DevOps Engineer II',
+            location: 'Bolivia',
             startDate: 'Mar 2022',
             endDate: 'Sep 2023',
             descriptionPoints: [
@@ -83,6 +105,7 @@ export default {
         {
             company: 'Fassil Bank',
             role: 'DevOps Engineer I',
+            location: 'Bolivia',
             startDate: 'Jan 2021',
             endDate: 'Mar 2022',
             descriptionPoints: [
@@ -109,6 +132,7 @@ export default {
         {
             company: 'Sofie Ltda.',
             role: 'Intern',
+            location: 'Bolivia',
             startDate: 'May 2020',
             endDate: 'Sep 2020',
             descriptionPoints: [
